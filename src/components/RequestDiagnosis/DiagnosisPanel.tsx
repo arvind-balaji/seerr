@@ -1,3 +1,4 @@
+import Alert from '@app/components/Common/Alert';
 import Badge from '@app/components/Common/Badge';
 import Button from '@app/components/Common/Button';
 import LoadingSpinner from '@app/components/Common/LoadingSpinner';
@@ -11,10 +12,10 @@ import useSettings from '@app/hooks/useSettings';
 import useToasts from '@app/hooks/useToasts';
 import defineMessages from '@app/utils/defineMessages';
 import {
+  ArrowDownCircleIcon,
   ArrowPathIcon,
-  CheckCircleIcon,
-  ExclamationTriangleIcon,
-  InformationCircleIcon,
+  LanguageIcon,
+  MagnifyingGlassIcon,
 } from '@heroicons/react/24/outline';
 import { MediaServerType } from '@server/constants/server';
 import type {
@@ -53,7 +54,10 @@ const messages = defineMessages('components.RequestDiagnosis', {
   askAdmin: 'Ask an admin to set up a fallback profile to enable this.',
   seasons: 'Seasons',
   season: 'Season {number}',
-  episodes: '{downloaded} of {aired} aired downloaded',
+  seasonHeader: 'Season',
+  episodesHeader: 'Episodes',
+  status: 'Status',
+  episodes: '{downloaded} of {aired} downloaded',
   episodesUpcoming: '{count} still to air',
   adminDetails: 'Details for admins',
   results:
@@ -67,6 +71,12 @@ const messages = defineMessages('components.RequestDiagnosis', {
   system: 'automatic',
   someoneElse: 'user #{id}',
 });
+
+const ACTION_ICONS: Record<DiagnosisAction, typeof ArrowPathIcon> = {
+  search: MagnifyingGlassIcon,
+  lower_quality: ArrowDownCircleIcon,
+  any_language: LanguageIcon,
+};
 
 const ACTION_NAMES: Record<DiagnosisAction, keyof typeof messages> = {
   search: 'search',
@@ -149,26 +159,12 @@ const DiagnosisPanel = ({
   const text = diagnosisText(intl, diagnosis, { mediaType, mediaServer });
   const badge = diagnosisBadge(intl, diagnosis, mediaType);
   const search = diagnosis.search;
-  const tone =
-    badge?.badgeType === 'danger' || badge?.badgeType === 'warning'
-      ? badge.badgeType
-      : badge?.badgeType === 'success'
-        ? 'success'
+  const alertType =
+    badge?.badgeType === 'danger'
+      ? 'error'
+      : badge?.badgeType === 'warning'
+        ? 'warning'
         : 'info';
-  const Icon =
-    tone === 'success'
-      ? CheckCircleIcon
-      : tone === 'info'
-        ? InformationCircleIcon
-        : ExclamationTriangleIcon;
-  const iconColour =
-    tone === 'danger'
-      ? 'text-red-400'
-      : tone === 'warning'
-        ? 'text-yellow-400'
-        : tone === 'success'
-          ? 'text-green-400'
-          : 'text-indigo-400';
 
   // Offer only the fixes that fit the problem; managers also see the rest.
   const offered = (['lower_quality', 'any_language', 'search'] as const).filter(
@@ -223,85 +219,102 @@ const DiagnosisPanel = ({
     }
   };
 
+  const visible = offered.filter((a) => a !== 'search' || searchUseful);
+
   return (
-    <div className="space-y-5 text-sm text-gray-300">
-      <div className="flex items-start gap-3">
-        <Icon className={`h-7 w-7 flex-shrink-0 ${iconColour}`} />
-        <div className="space-y-1">
-          <div className="flex flex-wrap items-center gap-2">
-            <h3 className="text-lg font-semibold text-white">
-              {text.headline}
-            </h3>
-          </div>
-          {text.body.map((p) => (
-            <p key={p}>{p}</p>
-          ))}
-        </div>
-      </div>
+    <div className="text-sm text-gray-300">
+      <Alert type={alertType} title={text.headline}>
+        {text.body.map((p) => (
+          <p key={p} className="mt-1 first:mt-0">
+            {p}
+          </p>
+        ))}
+      </Alert>
 
       {diagnosis.seasons && diagnosis.seasons.length > 0 && (
-        <div>
-          <h4 className="mb-2 font-semibold text-gray-200">
+        <>
+          <div className="mb-2 mt-4 flex items-center text-lg font-semibold text-white">
             {intl.formatMessage(messages.seasons)}
-          </h4>
-          <ul className="divide-y divide-gray-700 rounded-md border border-gray-700">
-            {diagnosis.seasons.map((s) => {
-              const sb = diagnosisBadge(
-                intl,
-                {
-                  ...diagnosis,
-                  category: s.category,
-                  expectedDate: s.nextAirDate,
-                  seasons: [s],
-                },
-                'tv'
-              );
-              return (
-                <li
-                  key={s.seasonNumber}
-                  className="flex flex-wrap items-center justify-between gap-2 px-3 py-2"
-                >
-                  <span className="font-medium text-white">
-                    {intl.formatMessage(messages.season, {
-                      number: s.seasonNumber,
-                    })}
-                  </span>
-                  <span className="text-gray-400">
-                    {intl.formatMessage(messages.episodes, {
-                      downloaded: s.downloaded,
-                      aired: s.aired,
-                    })}
-                    {s.episodes > s.aired &&
-                      ` · ${intl.formatMessage(messages.episodesUpcoming, {
-                        count: s.episodes - s.aired,
-                      })}`}
-                  </span>
-                  {sb && <Badge badgeType={sb.badgeType}>{sb.label}</Badge>}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+          </div>
+          <div className="overflow-hidden rounded-lg border border-gray-700 shadow backdrop-blur">
+            <table className="min-w-full">
+              <thead>
+                <tr>
+                  {(['seasonHeader', 'episodesHeader', 'status'] as const).map(
+                    (h) => (
+                      <th
+                        key={h}
+                        className="bg-gray-700/80 px-4 py-3 text-left text-xs font-medium uppercase leading-4 tracking-wider text-gray-200"
+                      >
+                        {intl.formatMessage(messages[h])}
+                      </th>
+                    )
+                  )}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-700">
+                {diagnosis.seasons.map((s) => {
+                  const sb = diagnosisBadge(
+                    intl,
+                    {
+                      ...diagnosis,
+                      category: s.category,
+                      expectedDate: s.nextAirDate,
+                      seasons: [s],
+                    },
+                    'tv'
+                  );
+                  return (
+                    <tr key={s.seasonNumber}>
+                      <td className="whitespace-nowrap px-4 py-3 font-medium text-gray-100">
+                        {intl.formatMessage(messages.season, {
+                          number: s.seasonNumber,
+                        })}
+                      </td>
+                      <td className="px-4 py-3 text-gray-200">
+                        {intl.formatMessage(messages.episodes, {
+                          downloaded: s.downloaded,
+                          aired: s.aired,
+                        })}
+                        {s.episodes > s.aired && (
+                          <span className="block text-xs text-gray-400">
+                            {intl.formatMessage(messages.episodesUpcoming, {
+                              count: s.episodes - s.aired,
+                            })}
+                          </span>
+                        )}
+                      </td>
+                      <td className="px-4 py-3">
+                        {sb && (
+                          <Badge badgeType={sb.badgeType}>{sb.label}</Badge>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </>
       )}
 
       {data.canRefresh && (
-        <div>
-          <h4 className="mb-2 font-semibold text-gray-200">
+        <>
+          <div className="mb-2 mt-4 flex items-center text-lg font-semibold text-white">
             {intl.formatMessage(messages.whatYouCanDo)}
-          </h4>
-          {offered.filter((a) => a !== 'search' || searchUseful).length ===
-          0 ? (
+          </div>
+          {visible.length === 0 ? (
             <p>{intl.formatMessage(messages.nothingToDo)}</p>
           ) : (
-            <ul className="space-y-3">
-              {offered
-                .filter((a) => a !== 'search' || searchUseful)
-                .map((a) => (
+            <ul className="divide-y divide-gray-700 overflow-hidden rounded-lg border border-gray-700 shadow backdrop-blur">
+              {visible.map((a) => {
+                const ActionIcon = ACTION_ICONS[a];
+                return (
                   <li
                     key={a}
-                    className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
+                    className="flex flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between"
                   >
-                    <p className="sm:mr-4">
+                    <p className="text-gray-300">
                       {tip(a)}
                       {a !== 'search' && mediaType === 'tv' && (
                         <span className="block text-xs text-gray-400">
@@ -310,7 +323,13 @@ const DiagnosisPanel = ({
                       )}
                     </p>
                     <Button
-                      buttonType={a === 'search' ? 'default' : 'primary'}
+                      buttonType={
+                        a === 'search'
+                          ? 'ghost'
+                          : confirming === a
+                            ? 'warning'
+                            : 'primary'
+                      }
                       buttonSize="sm"
                       className="flex-shrink-0"
                       disabled={!actions[a].allowed || busy !== null}
@@ -321,55 +340,61 @@ const DiagnosisPanel = ({
                       }
                     >
                       {busy === a ? (
-                        <ArrowPathIcon className="h-4 w-4 animate-spin" />
-                      ) : actions[a].reason === 'not_needed' &&
-                        a !== 'search' ? (
-                        intl.formatMessage(messages.alreadyApplied)
-                      ) : confirming === a ? (
-                        intl.formatMessage(messages.confirm)
+                        <ArrowPathIcon className="animate-spin" />
                       ) : (
-                        intl.formatMessage(messages[ACTION_NAMES[a]])
+                        <ActionIcon />
                       )}
+                      <span>
+                        {actions[a].reason === 'not_needed' && a !== 'search'
+                          ? intl.formatMessage(messages.alreadyApplied)
+                          : confirming === a
+                            ? intl.formatMessage(messages.confirm)
+                            : intl.formatMessage(messages[ACTION_NAMES[a]])}
+                      </span>
                     </Button>
                   </li>
-                ))}
+                );
+              })}
             </ul>
           )}
-        </div>
+        </>
       )}
 
-      <div className="flex flex-wrap items-center justify-between gap-2 border-t border-gray-700 pt-3 text-xs text-gray-400">
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs text-gray-400">
         <span>
-          {diagnosis.searchedAt
-            ? intl.formatMessage(messages.lastChecked, {
-                time: relative(intl, diagnosis.searchedAt),
-              })
-            : intl.formatMessage(messages.neverChecked)}
-          {diagnosis.nextSearchAt &&
+          {busy === 'refresh'
+            ? intl.formatMessage(messages.checking)
+            : diagnosis.searchedAt
+              ? intl.formatMessage(messages.lastChecked, {
+                  time: relative(intl, diagnosis.searchedAt),
+                })
+              : intl.formatMessage(messages.neverChecked)}
+          {busy !== 'refresh' &&
+            diagnosis.nextSearchAt &&
             new Date(diagnosis.nextSearchAt).getTime() > Date.now() &&
             ` · ${intl.formatMessage(messages.nextCheck, {
               time: relative(intl, diagnosis.nextSearchAt),
             })}`}
         </span>
         {data.canRefresh && (
-          <Button buttonSize="sm" onClick={refresh} disabled={busy !== null}>
+          <Button
+            buttonType="ghost"
+            buttonSize="sm"
+            onClick={refresh}
+            disabled={busy !== null}
+          >
             <ArrowPathIcon
-              className={`mr-1 h-4 w-4 ${busy === 'refresh' ? 'animate-spin' : ''}`}
+              className={busy === 'refresh' ? 'animate-spin' : ''}
             />
             <span>{intl.formatMessage(messages.checkNow)}</span>
           </Button>
         )}
       </div>
-      {busy === 'refresh' && (
-        <p className="text-xs text-gray-400">
-          {intl.formatMessage(messages.checking)}
-        </p>
-      )}
 
       {isManager &&
         (search || diagnosis.message || diagnosis.actions?.length) && (
-          <details className="rounded-md border border-gray-700 px-3 py-2 text-xs text-gray-400">
-            <summary className="cursor-pointer font-semibold text-gray-300">
+          <details className="mt-4 overflow-hidden rounded-lg border border-gray-700 px-4 py-3 text-xs text-gray-400 shadow backdrop-blur">
+            <summary className="cursor-pointer font-medium text-gray-200">
               {intl.formatMessage(messages.adminDetails)}
             </summary>
             <div className="mt-2 space-y-2">

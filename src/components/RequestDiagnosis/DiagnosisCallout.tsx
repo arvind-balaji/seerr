@@ -7,10 +7,11 @@ import {
 import useSettings from '@app/hooks/useSettings';
 import { Permission, useUser } from '@app/hooks/useUser';
 import defineMessages from '@app/utils/defineMessages';
+import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import {
   ExclamationTriangleIcon,
   InformationCircleIcon,
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/solid';
 import { MediaRequestStatus, MediaStatus } from '@server/constants/media';
 import { MediaServerType } from '@server/constants/server';
 import type Media from '@server/entity/Media';
@@ -19,7 +20,6 @@ import { useState } from 'react';
 import { useIntl } from 'react-intl';
 
 const messages = defineMessages('components.RequestDiagnosis', {
-  whyNotYet: 'Why isn’t this available yet?',
   details: 'Details & Options',
 });
 
@@ -83,31 +83,45 @@ const DiagnosisCallout = ({
   return (
     <>
       <div
-        className={`mb-6 flex flex-col gap-3 rounded-lg border p-4 sm:flex-row sm:items-center ${
+        className={`mb-6 flex flex-col gap-3 rounded-md border p-4 backdrop-blur sm:flex-row sm:items-center ${
           attention
-            ? 'border-yellow-500/50 bg-yellow-500/10'
-            : 'border-indigo-500/50 bg-indigo-500/10'
+            ? 'border-yellow-500 bg-yellow-400/20'
+            : 'border-indigo-500 bg-indigo-400/20'
         }`}
       >
-        <Icon
-          className={`hidden h-8 w-8 flex-shrink-0 sm:block ${
-            attention ? 'text-yellow-400' : 'text-indigo-300'
-          }`}
-        />
-        <div className="flex-1 text-sm text-gray-200">
-          <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
-            {intl.formatMessage(messages.whyNotYet)}
-          </p>
-          <p className="font-semibold text-white">{text.headline}</p>
-          <p>{text.body[0]}</p>
+        <div className="flex flex-1">
+          <div
+            className={`flex-shrink-0 ${
+              attention ? 'text-yellow-100' : 'text-gray-100'
+            }`}
+          >
+            <Icon className="h-5 w-5" />
+          </div>
+          <div className="ml-3 text-sm">
+            <div
+              className={`font-medium ${
+                attention ? 'text-yellow-100' : 'text-gray-100'
+              }`}
+            >
+              {text.headline}
+            </div>
+            <div
+              className={`mt-1 ${
+                attention ? 'text-yellow-300' : 'text-gray-300'
+              }`}
+            >
+              {text.body[0]}
+            </div>
+          </div>
         </div>
         <Button
-          buttonType={attention ? 'warning' : 'default'}
+          buttonType={attention ? 'warning' : 'primary'}
           buttonSize="sm"
-          className="flex-shrink-0"
+          className="ml-8 flex-shrink-0 sm:ml-0"
           onClick={() => setOpen(true)}
         >
-          {intl.formatMessage(messages.details)}
+          <span>{intl.formatMessage(messages.details)}</span>
+          <ChevronRightIcon />
         </Button>
       </div>
       <DiagnosisModal

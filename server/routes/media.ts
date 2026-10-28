@@ -11,6 +11,10 @@ import type {
   MediaResultsResponse,
   MediaWatchDataResponse,
 } from '@server/interfaces/api/mediaInterfaces';
+import requestDiagnostics, {
+  loadMediaForDiagnosis,
+} from '@server/lib/diagnostics';
+import type { DiagnosisAction } from '@server/lib/diagnostics/types';
 import { Permission } from '@server/lib/permissions';
 import { getSettings } from '@server/lib/settings';
 import logger from '@server/logger';
@@ -403,5 +407,97 @@ mediaRoutes.get<{ id: string }, MediaWatchDataResponse>(
     }
   }
 );
+
+/**
+ * Request diagnostics: why a requested item hasn't arrived, and what the
+ * requester (or a request manager) can do about it.
+ */
+const loadForUser = async (
+  id: string,
+  user: User | undefined
+): Promise<Media | { status: number; message: string }> => {
+  const media = await loadMediaForDiagnosis(Number(id));
+  if (!media) return { status: 404, message: 'Media does not exist.' };
+  const allowed =
+    user?.hasPermission(Permission.MANAGE_REQUESTS) ||
+    media.requests.some((r) => r.requestedBy?.id === user?.id);
+  if (!allowed) {
+    return { status: 403, message: 'You can only view your own requests.' };
+  }
+  return media;
+};
+
+mediaRoutes.get<{ id: string }>('/:id/diagnosis', async (req, res, next) => {
+  const is4k = req.query.is4k === 'true';
+  const media = await loadForUser(req.params.id, req.user as User);
+  if (!(media instanceof Media)) return next(media);
+
+  if (!media[is4k ? 'diagnosis4k' : 'diagnosis']) {
+    // First look: run the cheap checks now; the job does the indexer search.
+    const diagnosis = await requestDiagnostics.diagnose(media, is4k, 'never');
+    await requestDiagnostics.save(media, is4k, diagnosis);
+  }
+  return res
+    .status(200)
+    .json(requestDiagnostics.describe(media, is4k, req.user as User));
+});
+
+mediaRoutes.post<{ id: string }, unknown, { is4k?: boolean }>(
+  '/:id/diagnosis/refresh',
+  async (req, res, next) => {
+    const media = await loadForUser(req.params.id, req.user as User);
+    if (!(media instanceof Media)) return next(media);
+    try {
+      return res
+        .status(200)
+        .json(
+          await requestDiagnostics.refresh(
+            media,
+            !!req.body.is4k,
+            req.user as User
+          )
+        );
+    } catch (e) {
+      logger.error('Failed to refresh request diagnosis', {
+        label: 'API',
+        errorMessage: e.message,
+        mediaId: req.params.id,
+      });
+      return next({ status: 500, message: 'Failed to check this request.' });
+    }
+  }
+);
+
+mediaRoutes.post<
+  { id: string },
+  unknown,
+  { is4k?: boolean; action: DiagnosisAction }
+>('/:id/diagnosis/action', async (req, res, next) => {
+  const media = await loadForUser(req.params.id, req.user as User);
+  if (!(media instanceof Media)) return next(media);
+  try {
+    return res
+      .status(200)
+      .json(
+        await requestDiagnostics.perform(
+          media,
+          !!req.body.is4k,
+          req.body.action,
+          req.user as User
+        )
+      );
+  } catch (e) {
+    if (e.status === 403) {
+      return next({ status: 403, message: `Not allowed: ${e.reason}` });
+    }
+    logger.error('Request remediation failed', {
+      label: 'API',
+      errorMessage: e.message,
+      mediaId: req.params.id,
+      action: req.body.action,
+    });
+    return next({ status: 500, message: 'Something went wrong.' });
+  }
+});
 
 export default mediaRoutes;

@@ -1,0 +1,389 @@
+[
+  {
+    "title": "The Odyssey (2026) 1080p WEBRip x265 10bit 5.1-LAMA",
+    "size": 1542743040,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.4 GB is smaller than minimum allowed 2.1 GB (for The Odyssey)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 1344,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Odyssey 2026 (NOT The Chris Nolan FILM) 1080p WEB-DL HEVC x265 5.1 BONE",
+    "size": 1100473216,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.0 GB is smaller than minimum allowed 2.1 GB (for The Odyssey)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 154,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Odyssey 2026 NOT The Chris Nolan FILM 1080p WEB-DL HEVC x265 5 1-BONE",
+    "size": 1100474112,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.0 GB is smaller than minimum allowed 2.1 GB (for The Odyssey)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 5,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Odyssey 2026 1080p AMZN WEB-DL DDP5 1 H 264-Kitsune",
+    "size": 4673212416,
+    "approved": true,
+    "temporarilyRejected": false,
+    "rejections": [],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 1941,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Odyssey (2026) 1080p WEBRip 5.1-LAMA",
+    "size": 1702595712,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.6 GB is smaller than minimum allowed 2.1 GB (for The Odyssey)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 17,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Odyssey.2026.720p.TUBI.WEB-DL.AAC2.0-NOtLAN (NOT The Chris Nolan FILM)",
+    "size": 1381045120,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.3 GB is smaller than minimum allowed 2.1 GB (for The Odyssey)",
+      "WEBDL-720p is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1401,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 103,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Odyssey.2026.1080p.TELESYNC.HEVC.AAC2.0-SPLiCE",
+    "size": 5968901120,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["TELESYNC is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "TELESYNC",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 301,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 3534,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Odyssey 2026 1080p TELESYNC HEVC [Ukr Dub]",
+    "size": 11301559296,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "English is wanted, but found Ukrainian",
+      "TELESYNC is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "TELESYNC",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 301,
+    "languages": [
+      {
+        "name": "Ukrainian"
+      }
+    ],
+    "seeders": 41,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Odyssey (2026) 1080P HQ HDTS x265 AAC2.0 MULTI HC-Sub -MAZE",
+    "size": 2128457728,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Hardcode subs found: Generic Hardcoded Subs",
+      "TELESYNC is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "TELESYNC",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 301,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 46,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Odyssey 2026 720p TELESYNC HEVC [Ukr Dub]",
+    "size": 7771947520,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "English is wanted, but found Ukrainian",
+      "TELESYNC is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "TELESYNC",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 301,
+    "languages": [
+      {
+        "name": "Ukrainian"
+      }
+    ],
+    "seeders": 9,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Odyssey 2026 TELESYNC HEVC [Ukr Dub]",
+    "size": 4148205568,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "English is wanted, but found Ukrainian",
+      "TELESYNC is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "TELESYNC",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 301,
+    "languages": [
+      {
+        "name": "Ukrainian"
+      }
+    ],
+    "seeders": 12,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Odyssey.2026.1080p.CAM.HEVC.10bit.AAC-LuCY",
+    "size": 2486202000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["CAM is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "CAM",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 201,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "The.Odyssey.2026.iNTERNAL.1080p.CAM.NL.ESP.HARDSUBS.AAC.x264-LuCY",
+    "size": 4934863000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Hardcode subs found: HARDSUBS",
+      "CAM is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "CAM",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 201,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "the.odyssey.2026.web.CAM.h264-rbb",
+    "size": 1526766000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["CAM is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "CAM",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 201,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "the.odyssey.2026.CAM.h264-rbb",
+    "size": 1516370000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["CAM is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "CAM",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 201,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "The Odyssey The Making Of An Epic (2026) 1080p WEBRip 5.1-LAMA",
+    "size": 438535424,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 112,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Odyssey.The.Making.of.an.Epic.2026.1080p.WEB.h264-EDITH",
+    "size": 1019512640,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 42,
+    "protocol": "torrent"
+  }
+]

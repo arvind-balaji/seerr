@@ -68,7 +68,7 @@ const RequestItemError = ({
   revalidateList,
 }: RequestItemErrorProps) => {
   const intl = useIntl();
-  const { hasPermission } = useUser();
+  const { user, hasPermission } = useUser();
 
   const deleteRequest = async () => {
     await axios.delete(`/api/v1/media/${requestData?.media.id}`);
@@ -162,6 +162,13 @@ const RequestItemError = ({
                         ? requestData.media.serviceUrl4k
                         : requestData.media.serviceUrl
                     }
+                    diagnosis={
+                      requestData.media[
+                        requestData.is4k ? 'diagnosis4k' : 'diagnosis'
+                      ]
+                    }
+                    mediaId={requestData.media?.id}
+                    isRequester={requestData.requestedBy?.id === user?.id}
                   />
                 )}
               </div>
@@ -559,6 +566,13 @@ const RequestItem = ({ request, revalidateList }: RequestItemProps) => {
                       ? requestData.media.serviceUrl4k
                       : requestData.media.serviceUrl
                   }
+                  diagnosis={
+                    requestData.media[
+                      requestData.is4k ? 'diagnosis4k' : 'diagnosis'
+                    ]
+                  }
+                  mediaId={requestData.media?.id}
+                  isRequester={requestData.requestedBy?.id === user?.id}
                 />
               )}
             </div>

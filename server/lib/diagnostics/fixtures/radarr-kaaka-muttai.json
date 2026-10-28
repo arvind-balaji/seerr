@@ -1,0 +1,1887 @@
+[
+  {
+    "title": "Kaaka Muttai (2015) - DVDSCR - TC Rip - 1CD - MP4.mp4",
+    "size": 733446528,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "English is wanted, but found Tamil",
+      "TELECINE is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "TELECINE",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 401,
+    "languages": [
+      {
+        "name": "Tamil"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Avengers.Age.of.Ultron.2015.2160p.BluRay.HEVC.TrueHD.7.1.Atmos-T",
+    "size": 59169525760,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "BR-DISK is not wanted in profile",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "BR-DISK",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 2401,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 83,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Avengers.Age.of.Ultron.2015.1080p.BluRay.DDP5.1.x265.10bit-Galax",
+    "size": 3065324288,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "2.9 GB is smaller than minimum allowed 7.0 GB (for Avengers: Age of Ultron)",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 118,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Avengers: Age of Ultron (2015) 1080p BrRip x264 -YIFY",
+    "size": 2205728768,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "2.1 GB is smaller than minimum allowed 7.0 GB (for Avengers: Age of Ultron)",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 586,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Avengers: Age of Ultron (2015) 720p BrRip x264 -YIFY",
+    "size": 976236864,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "931.0 MB is smaller than minimum allowed 3.5 GB (for Avengers: Age of Ultron)",
+      "Bluray-720p is not wanted in profile",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 77,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Inside Out (2015) 1080p BrRip x264 -YIFY",
+    "size": 1547049344,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.4 GB is smaller than minimum allowed 4.7 GB (for Inside Out)",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 334,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Inside Out (2015) 720p BrRip x264 -YIFY",
+    "size": 791348352,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "754.7 MB is smaller than minimum allowed 2.4 GB (for Inside Out)",
+      "Bluray-720p is not wanted in profile",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 78,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Mission.Impossible.Rogue.Nation.2015.1080p.BluRay.x264.DTS-JYK",
+    "size": 3557718272,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "3.3 GB is smaller than minimum allowed 6.5 GB (for Mission: Impossible - Rogue Nation)",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [LQ]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 122,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Jurassic World 2015 1080p BRRip x264 DTS-JYK",
+    "size": 3365905152,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "3.1 GB is smaller than minimum allowed 6.2 GB (for Jurassic World)",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [LQ]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 119,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Pitch Perfect 2 (2015) 1080p BrRip x264 -YIFY",
+    "size": 1984303104,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.8 GB is smaller than minimum allowed 5.7 GB (for Pitch Perfect 2)",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 102,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Martian.2015.EXTENDED.1080p.BluRay.DDP5.1.x265.10bit-GalaxyR",
+    "size": 3499575296,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 529,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Big Short 2015 1080p BluRay x264 DTS-JYK",
+    "size": 3524664576,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 401,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Mad Max: Fury Road (2015) 1080p BrRip x264 -YIFY",
+    "size": 1981030656,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 376,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Hateful Eight (2015) [1080p] [BluRay]",
+    "size": 2727616256,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 376,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Ex Machina (2015) 1080p BrRip x264 -YIFY",
+    "size": 1750861056,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 328,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Sicario 2015 1080p BluRay x264 AC3-JYK",
+    "size": 3178200832,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 323,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Star.Wars.Episode.VII.The.Force.Awakens.2015.1080p.BluRay-JYK",
+    "size": 3736471552,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 292,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Martian (2015) [REPACK] [2160p] [BluRay] [5.1]",
+    "size": 7590585856,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2202,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 214,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Avengers Age of Ultron 2015 REPACK 1080p BluRay DDP 7 1 x265-edge2020",
+    "size": 6382294016,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1802,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 179,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Hateful Eight 2015 4K UHD 2160p REMUX DCPRip DTS-HD 5.1-DDR",
+    "size": 40865959936,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Remux-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2301,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 154,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Lobster 2015 1080p BluRay x264 DTS-JYK",
+    "size": 3088979712,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 146,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Sicario (2015) [2160p] [BluRay] [5.1]",
+    "size": 5877554176,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2201,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 140,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Jupiter Ascending (2015) 1080p BrRip x264 -YIFY",
+    "size": 2094821888,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 139,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Revenant (2015) [2160p] [BluRay] [5.1]",
+    "size": 7639482368,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2201,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 139,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Steve Jobs (2015) [1080p] [BluRay]",
+    "size": 2004105728,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 136,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Revenant.2015.1080p.AMZN.WEBRip.1600MB.DD5.1.x264-GalaxyRG",
+    "size": 1721061760,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 134,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Minions 2015 1080p BluRay x264 AC3-JYK",
+    "size": 2819758592,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 132,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Sicario 2015 1080p BluRay x265 SDR DDP Atmos 7 1 English -DarQ-HONE",
+    "size": 7287163904,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 127,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Ant-Man 2015 1080p BluRay x264 DTS-JYK",
+    "size": 3168707584,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 123,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Bone Tomahawk 2015 1080p BluRay x264 DTS-JYK",
+    "size": 3572662016,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 123,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Insurgent (2015) 1080p BrRip x264 -YIFY",
+    "size": 1978910720,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 121,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Tomorrowland (2015) 1080p BrRip x264 -YIFY",
+    "size": 2087645056,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 121,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Spectre 2015 1080p BluRay x264 DTS-JYK",
+    "size": 4007056128,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 120,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Terminator Genisys (2015) 1080p BrRip x264 -YIFY",
+    "size": 1989655936,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 118,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Man from UNCLE (2015) 1080p x264 DD5.1 EN NL Subs",
+    "size": 3181440768,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "HDTV-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1601,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 118,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Terminator Genisys 2015 2160p AI 60FPS BluRay AV1 SDR TrueHD MultiSubs_Marjenbo",
+    "size": 42384412672,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2201,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 118,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Chappie (2015) 1080p BrRip x264 -YIFY",
+    "size": 1979820288,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 117,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Ted.2.2015.EXTENDED.1080p.BluRay.x265-RBG",
+    "size": 2105967872,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 117,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Creed 2015 1080p BluRay x264 DTS-JYK",
+    "size": 3603280640,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 112,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Hunger.Games.Mockingjay.Part.2.2015.1080p.BluRay.x264-JYK",
+    "size": 3705406976,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 112,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hardcore Henry 2015 1080p BluRay x264 DTS-JYK",
+    "size": 2620237056,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 112,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Spotlight (2015) (1080p BluRay x265 HEVC 10bit AAC 5.1 Silence)",
+    "size": 6038119424,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 112,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Martian.2015.EXTENDED.1080p.BRRip.x264.AAC-ETRG",
+    "size": 2381829632,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 111,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Spectre.2015.1080p.REPACK.BluRay.x264.AC3-ETRG",
+    "size": 4347807744,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1802,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 107,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Bridge of Spies (2015) (1080p BluRay x265 HEVC 10bit AAC 7.1 Sil",
+    "size": 7530885120,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 107,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Furious.7.2015.EXTENDED.PROPER.1080p.BluRay.H264.AAC-[TGx]",
+    "size": 2863413248,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1802,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 107,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Mad.Max.Fury.Road.2015.1080p.BluRay.DDP5.1.x265.10bit-GalaxyRG26",
+    "size": 3959351040,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 107,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Maze.Runner.The.Scorch.Trials.2015.1080p.BRRip.x264.AAC-ETRG",
+    "size": 2072128512,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 103,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Sicario.2015.720p.BRRip.x264-ETRG",
+    "size": 1302298368,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 103,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Legend.2015.1080p.BRRip.x264.AAC-ETRG",
+    "size": 2062545792,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 103,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Pixels (2015) 1080p BrRip x264 -YIFY",
+    "size": 1766916736,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 102,
+    "protocol": "torrent"
+  },
+  {
+    "title": "It Follows 2015 1080p BluRay x264-nikt0",
+    "size": 4821802496,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 101,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Superfast 2015 1080p BluRay HEVC x265 5.1 BONE",
+    "size": 1500359168,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 101,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Age of Adaline (2015) 1080p BrRip x264 -YIFY",
+    "size": 1770379776,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 99,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Legend 2015 Open Matte Ai Upscaled 2160p WEB-DL HEVC x265 5.1 Marjenbo_",
+    "size": 41845997568,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2101,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 95,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Scouts Guide To The Zombie Apocalypse 2015 1080p BluRay x265",
+    "size": 1551566976,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 94,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Intern.2015.1080p.BluRay.x265-RBG",
+    "size": 2033308416,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 94,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Ant-Man.2015.1080p.BluRay.DDP5.1.x265.10bit-GalaxyRG265",
+    "size": 2821358080,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 94,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Burnt 2015 1080p BluRay x264 DTS-JYK",
+    "size": 2732463104,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 92,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Witch.2015.1080p.BRRip.x264.AAC-ETRG",
+    "size": 1454516864,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 91,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Martian.2015.EXTENDED.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.True",
+    "size": 53764485120,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Remux-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2301,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 91,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Focus (2015) 1080p BrRip x264 -YIFY",
+    "size": 1760889472,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 89,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Crimson Peak (2015) (1080p BluRay x265 HEVC 10bit AAC 7.1 Tigole",
+    "size": 7833939968,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 89,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Love (2015) Explicit 1080p BluRay x264 AAC -QRips",
+    "size": 2182766336,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 89,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Big.Short.2015.1080p.BluRay.DDP5.1.x265.10bit-GalaxyRG265",
+    "size": 4335632384,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 88,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Martian.2015.EXTENDED.1080p.BluRay.REMUX.AVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT",
+    "size": 44976836608,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Remux-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1901,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 85,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Longest Ride (2015) 1080p BrRip x264 -YIFY",
+    "size": 2090491264,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 84,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Room.2015.1080p.BRRip.x264.AAC-ETRG",
+    "size": 1850676864,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 81,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Big Short (2015) (1080p BluRay x265 10bit EAC3 7.1 Celdra)",
+    "size": 9754804224,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 81,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Big Short 2015 1080p AMZN WEB-DL DDP5 1 H 264-BLOOM",
+    "size": 9378463744,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 81,
+    "protocol": "torrent"
+  },
+  {
+    "title": "McFarland, USA (2015) 1080p BrRip x264 -YIFY",
+    "size": 2084961920,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 80,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Furious 7 2015 1080p NF WEB-DL DDP5 1 AV1-Saon",
+    "size": 2775086592,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 80,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Fifty Shades of Grey (2015) 1080p BrRip x264 -YIFY",
+    "size": 2094304640,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 79,
+    "protocol": "torrent"
+  },
+  {
+    "title": "A Man Called Ove (2015) [1080p] [BluRay] [5.1]",
+    "size": 2295259904,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 78,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Gift 2015 1080p BluRay x264 DTS-JYK",
+    "size": 2925892864,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 77,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Furious Seven (2015) 1080p BrRip x264 -YIFY",
+    "size": 2213601792,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 76,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Good Dinosaur 2015 1080p BluRay x264 DTS-JYK",
+    "size": 2533454848,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 76,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Lobster (2015) (1080p BluRay x265 10bit AAC 5.1 afm72) [QxR]",
+    "size": 5024787456,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 76,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Inside Out 2015 REPACK 1080p BluRay DD  7 1 X265-Ralphy",
+    "size": 3041184512,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1802,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 76,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Vacation 2015 1080p BluRay x264 DTS-JYK",
+    "size": 2679544064,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 75,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Anomalisa.2015.1080p.BluRay.DDP5.1.x265.10bit-GalaxyRG265",
+    "size": 966816896,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 75,
+    "protocol": "torrent"
+  }
+]

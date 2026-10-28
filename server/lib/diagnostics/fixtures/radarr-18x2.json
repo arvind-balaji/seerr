@@ -1,0 +1,44 @@
+[
+  {
+    "title": "18x2.Beyond.Youthful.Days.2024.1080p.WEB-DL.HEVC.x265.5.1.BONE",
+    "size": 1662517000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["English is wanted, but found Chinese"],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Chinese"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "18x2 Beyond Youthful Days 2024 1080p WEB-DL HEVC x265 5.1 BONE",
+    "size": 1628888064,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["English is wanted, but found Chinese"],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Chinese"
+      }
+    ],
+    "seeders": 33,
+    "protocol": "torrent"
+  }
+]

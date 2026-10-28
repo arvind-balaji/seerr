@@ -2,13 +2,18 @@ import Spinner from '@app/assets/spinner.svg';
 import Badge from '@app/components/Common/Badge';
 import Tooltip from '@app/components/Common/Tooltip';
 import DownloadBlock from '@app/components/DownloadBlock';
+import DiagnosisModal from '@app/components/RequestDiagnosis/DiagnosisModal';
+import { diagnosisBadge } from '@app/components/RequestDiagnosis/labels';
 import useSettings from '@app/hooks/useSettings';
 import { Permission, useUser } from '@app/hooks/useUser';
 import globalMessages from '@app/i18n/globalMessages';
 import defineMessages from '@app/utils/defineMessages';
+import { InformationCircleIcon } from '@heroicons/react/24/solid';
 import { MediaStatus } from '@server/constants/media';
 import { MediaServerType } from '@server/constants/server';
+import type { Diagnosis } from '@server/lib/diagnostics/types';
 import type { DownloadingItem } from '@server/lib/downloadtracker';
+import { useState } from 'react';
 import { useIntl } from 'react-intl';
 
 const messages = defineMessages('components.StatusBadge', {
@@ -19,6 +24,7 @@ const messages = defineMessages('components.StatusBadge', {
   managemedia: 'Manage {mediaType}',
   seasonnumber: 'S{seasonNumber}',
   seasonepisodenumber: 'S{seasonNumber}E{episodeNumber}',
+  whyTooltip: 'Why isn’t this available yet?',
 });
 
 interface StatusBadgeProps {
@@ -32,6 +38,12 @@ interface StatusBadgeProps {
   mediaType?: 'movie' | 'tv';
   title?: string | string[];
   statusLabelOverride?: string;
+  /** Why a request is stuck; replaces "Requested" with the reason. */
+  diagnosis?: Diagnosis | null;
+  /** Media id, so the badge can open the diagnosis dialog. */
+  mediaId?: number;
+  /** The viewer requested this item, so may see the diagnosis. */
+  isRequester?: boolean;
 }
 
 const StatusBadge = ({
@@ -45,10 +57,14 @@ const StatusBadge = ({
   mediaType,
   title,
   statusLabelOverride,
+  diagnosis,
+  mediaId,
+  isRequester = false,
 }: StatusBadgeProps) => {
   const intl = useIntl();
   const { hasPermission } = useUser();
   const settings = useSettings();
+  const [showDiagnosis, setShowDiagnosis] = useState(false);
 
   let mediaLink: string | undefined;
   let mediaLinkDescription: string | undefined;
@@ -285,7 +301,57 @@ const StatusBadge = ({
         </Tooltip>
       );
 
-    case MediaStatus.PROCESSING:
+    case MediaStatus.PROCESSING: {
+      const reason = !inProgress
+        ? diagnosisBadge(intl, diagnosis, mediaType)
+        : undefined;
+      if (reason) {
+        const canInspect =
+          mediaId !== undefined &&
+          (isRequester || hasPermission(Permission.MANAGE_REQUESTS));
+        const label = intl.formatMessage(
+          is4k ? messages.status4k : messages.status,
+          { status: reason.label }
+        );
+        if (!canInspect) {
+          return (
+            <Tooltip content={mediaLinkDescription}>
+              <Badge badgeType={reason.badgeType} href={mediaLink}>
+                {label}
+              </Badge>
+            </Tooltip>
+          );
+        }
+        return (
+          <>
+            <Tooltip content={intl.formatMessage(messages.whyTooltip)}>
+              <button
+                type="button"
+                className="inline-flex"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setShowDiagnosis(true);
+                }}
+              >
+                <Badge badgeType={reason.badgeType} className="cursor-pointer">
+                  <span className="flex items-center">
+                    {label}
+                    <InformationCircleIcon className="ml-1 h-3.5 w-3.5" />
+                  </span>
+                </Badge>
+              </button>
+            </Tooltip>
+            <DiagnosisModal
+              show={showDiagnosis}
+              mediaId={mediaId}
+              is4k={is4k}
+              subTitle={Array.isArray(title) ? title[0] : title}
+              onClose={() => setShowDiagnosis(false)}
+            />
+          </>
+        );
+      }
       return (
         <Tooltip
           content={inProgress ? tooltipContent : mediaLinkDescription}
@@ -349,6 +415,7 @@ const StatusBadge = ({
           </Badge>
         </Tooltip>
       );
+    }
 
     case MediaStatus.PENDING:
       return (

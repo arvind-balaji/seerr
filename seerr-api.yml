@@ -2145,6 +2145,32 @@ components:
             - certification: 'PG'
               meaning: 'Some material may not be suitable for children under 10.'
               order: 2
+    DiagnosisResponse:
+      type: object
+      properties:
+        diagnosis:
+          type: object
+          nullable: true
+          additionalProperties: true
+        canRefresh:
+          type: boolean
+        isManager:
+          type: boolean
+        mediaType:
+          type: string
+          enum:
+            - movie
+            - tv
+        actions:
+          type: object
+          additionalProperties: true
+        fallbackProfiles:
+          type: object
+          properties:
+            lowerQuality:
+              type: string
+            anyLanguage:
+              type: string
   securitySchemes:
     cookieAuth:
       type: apiKey
@@ -7454,6 +7480,110 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/User'
+  /media/{mediaId}/diagnosis:
+    get:
+      summary: Get request diagnosis
+      description: Explains why a requested item is not available yet and which fixes the current user may apply. Available to the requester and to users with MANAGE_REQUESTS.
+      tags:
+        - media
+      parameters:
+        - in: path
+          name: mediaId
+          required: true
+          example: '1'
+          schema:
+            type: string
+        - in: query
+          name: is4k
+          required: false
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: Diagnosis
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiagnosisResponse'
+        '403':
+          description: Not the requester
+        '404':
+          description: Media does not exist
+  /media/{mediaId}/diagnosis/refresh:
+    post:
+      summary: Re-check a request
+      description: Re-runs the diagnosis, including an indexer search. Requesters get a cached result if a search ran in the last hour.
+      tags:
+        - media
+      parameters:
+        - in: path
+          name: mediaId
+          required: true
+          example: '1'
+          schema:
+            type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                is4k:
+                  type: boolean
+      responses:
+        '200':
+          description: Diagnosis
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiagnosisResponse'
+        '403':
+          description: Not the requester
+        '404':
+          description: Media does not exist
+  /media/{mediaId}/diagnosis/action:
+    post:
+      summary: Apply a fix to a stuck request
+      description: Searches again, or switches the item to an admin-configured fallback quality profile and searches.
+      tags:
+        - media
+      parameters:
+        - in: path
+          name: mediaId
+          required: true
+          example: '1'
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - action
+              properties:
+                action:
+                  type: string
+                  enum:
+                    - search
+                    - lower_quality
+                    - any_language
+                is4k:
+                  type: boolean
+      responses:
+        '200':
+          description: Diagnosis
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiagnosisResponse'
+        '403':
+          description: Action not allowed
+        '404':
+          description: Media does not exist
   /collection/{collectionId}:
     get:
       summary: Get collection details

@@ -21,6 +21,7 @@ import ManageSlideOver from '@app/components/ManageSlideOver';
 import MediaSlider from '@app/components/MediaSlider';
 import PersonCard from '@app/components/PersonCard';
 import RequestButton from '@app/components/RequestButton';
+import DiagnosisCallout from '@app/components/RequestDiagnosis/DiagnosisCallout';
 import RequestModal from '@app/components/RequestModal';
 import Slider from '@app/components/Slider';
 import StatusBadge from '@app/components/StatusBadge';
@@ -573,6 +574,11 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
               mediaType="tv"
               plexUrl={plexUrl}
               serviceUrl={data.mediaInfo?.serviceUrl}
+              diagnosis={data.mediaInfo?.diagnosis}
+              mediaId={data.mediaInfo?.id}
+              isRequester={(data.mediaInfo?.requests ?? []).some(
+                (r) => r.requestedBy?.id === user?.id && r.is4k === false
+              )}
             />
             {settings.currentSettings.series4kEnabled &&
               hasPermission(
@@ -597,6 +603,11 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
                   mediaType="tv"
                   plexUrl={plexUrl4k}
                   serviceUrl={data.mediaInfo?.serviceUrl4k}
+                  diagnosis={data.mediaInfo?.diagnosis4k}
+                  mediaId={data.mediaInfo?.id}
+                  isRequester={(data.mediaInfo?.requests ?? []).some(
+                    (r) => r.requestedBy?.id === user?.id && r.is4k === true
+                  )}
                 />
               )}
           </div>
@@ -743,6 +754,11 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
       </div>
       <div className="media-overview">
         <div className="media-overview-left">
+          <DiagnosisCallout
+            media={data.mediaInfo}
+            title={data.name}
+            onChange={() => revalidate()}
+          />
           {data.tagline && <div className="tagline">{data.tagline}</div>}
           <h2>{intl.formatMessage(messages.overview)}</h2>
           <p>

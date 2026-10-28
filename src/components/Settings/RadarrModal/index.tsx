@@ -46,6 +46,13 @@ const messages = defineMessages('components.Settings.RadarrModal', {
   syncEnabled: 'Enable Scan',
   externalUrl: 'External URL',
   qualityprofile: 'Quality Profile',
+  fallbackQualityProfile: 'Lower-Quality Fallback Profile',
+  fallbackQualityProfileTip:
+    'Profile a requester may switch to when only lower-quality releases exist. Leave empty to disable.',
+  fallbackLanguageProfile: 'Any-Language Fallback Profile',
+  fallbackLanguageProfileTip:
+    'Profile a requester may switch to when only releases in other languages exist. Leave empty to disable.',
+  noneOption: 'None',
   rootfolder: 'Root Folder',
   minimumAvailability: 'Minimum Availability',
   server4k: '4K Server',
@@ -233,6 +240,8 @@ const RadarrModal = ({ onClose, radarr, onSave }: RadarrModalProps) => {
           apiKey: radarr?.apiKey,
           baseUrl: radarr?.baseUrl,
           activeProfileId: radarr?.activeProfileId,
+          fallbackQualityProfileId: radarr?.fallbackQualityProfileId ?? '',
+          fallbackLanguageProfileId: radarr?.fallbackLanguageProfileId ?? '',
           rootFolder: radarr?.activeDirectory,
           minimumAvailability: radarr?.minimumAvailability ?? 'released',
           tags: radarr?.tags ?? [],
@@ -250,6 +259,15 @@ const RadarrModal = ({ onClose, radarr, onSave }: RadarrModalProps) => {
               (profile) => profile.id === Number(values.activeProfileId)
             )?.name;
 
+            const fallbackQualityProfileName = testResponse.profiles.find(
+              (profile) =>
+                profile.id === Number(values.fallbackQualityProfileId)
+            )?.name;
+            const fallbackLanguageProfileName = testResponse.profiles.find(
+              (profile) =>
+                profile.id === Number(values.fallbackLanguageProfileId)
+            )?.name;
+
             const submission = {
               name: values.name,
               hostname: values.hostname,
@@ -259,6 +277,12 @@ const RadarrModal = ({ onClose, radarr, onSave }: RadarrModalProps) => {
               baseUrl: values.baseUrl,
               activeProfileId: Number(values.activeProfileId),
               activeProfileName: profileName,
+              fallbackQualityProfileId:
+                Number(values.fallbackQualityProfileId) || undefined,
+              fallbackQualityProfileName,
+              fallbackLanguageProfileId:
+                Number(values.fallbackLanguageProfileId) || undefined,
+              fallbackLanguageProfileName,
               activeDirectory: values.rootFolder,
               is4k: values.is4k,
               minimumAvailability: values.minimumAvailability,
@@ -568,6 +592,88 @@ const RadarrModal = ({ onClose, radarr, onSave }: RadarrModalProps) => {
                       typeof errors.activeProfileId === 'string' && (
                         <div className="error">{errors.activeProfileId}</div>
                       )}
+                  </div>
+                </div>
+                <div className="form-row">
+                  <label
+                    htmlFor="fallbackQualityProfileId"
+                    className="text-label"
+                  >
+                    {intl.formatMessage(messages.fallbackQualityProfile)}
+                    <span className="label-tip">
+                      {intl.formatMessage(messages.fallbackQualityProfileTip)}
+                    </span>
+                  </label>
+                  <div className="form-input-area">
+                    <div className="form-input-field">
+                      <Field
+                        as="select"
+                        id="fallbackQualityProfileId"
+                        name="fallbackQualityProfileId"
+                        disabled={!isValidated || isTesting}
+                      >
+                        <option value="">
+                          {intl.formatMessage(messages.noneOption)}
+                        </option>
+                        {testResponse.profiles.length > 0 &&
+                          testResponse.profiles
+                            .toSorted((a, b) =>
+                              a.name.localeCompare(b.name, intl.locale, {
+                                numeric: true,
+                                sensitivity: 'base',
+                              })
+                            )
+                            .map((profile) => (
+                              <option
+                                key={`fallbackQualityProfileId-profile-${profile.id}`}
+                                value={profile.id}
+                              >
+                                {profile.name}
+                              </option>
+                            ))}
+                      </Field>
+                    </div>
+                  </div>
+                </div>
+                <div className="form-row">
+                  <label
+                    htmlFor="fallbackLanguageProfileId"
+                    className="text-label"
+                  >
+                    {intl.formatMessage(messages.fallbackLanguageProfile)}
+                    <span className="label-tip">
+                      {intl.formatMessage(messages.fallbackLanguageProfileTip)}
+                    </span>
+                  </label>
+                  <div className="form-input-area">
+                    <div className="form-input-field">
+                      <Field
+                        as="select"
+                        id="fallbackLanguageProfileId"
+                        name="fallbackLanguageProfileId"
+                        disabled={!isValidated || isTesting}
+                      >
+                        <option value="">
+                          {intl.formatMessage(messages.noneOption)}
+                        </option>
+                        {testResponse.profiles.length > 0 &&
+                          testResponse.profiles
+                            .toSorted((a, b) =>
+                              a.name.localeCompare(b.name, intl.locale, {
+                                numeric: true,
+                                sensitivity: 'base',
+                              })
+                            )
+                            .map((profile) => (
+                              <option
+                                key={`fallbackLanguageProfileId-profile-${profile.id}`}
+                                value={profile.id}
+                              >
+                                {profile.name}
+                              </option>
+                            ))}
+                      </Field>
+                    </div>
                   </div>
                 </div>
                 <div className="form-row">

@@ -373,6 +373,34 @@ class SonarrAPI extends ServarrBase<{
     }
   }
 
+  public async searchSeason(
+    seriesId: number,
+    seasonNumber: number
+  ): Promise<void> {
+    logger.info('Executing season search command.', {
+      label: 'Sonarr API',
+      seriesId,
+      seasonNumber,
+    });
+    await this.runCommand('SeasonSearch', { seriesId, seasonNumber });
+  }
+
+  /** Switches the series to another quality profile; returns the previous one. */
+  public async setQualityProfile(
+    seriesId: number,
+    qualityProfileId: number
+  ): Promise<number> {
+    const response = await this.axios.get<
+      SonarrSeries & { id: number; qualityProfileId: number }
+    >(`/series/${seriesId}`);
+    const previous = response.data.qualityProfileId;
+    await this.axios.put(`/series/${seriesId}`, {
+      ...response.data,
+      qualityProfileId,
+    });
+    return previous;
+  }
+
   public async getEpisodes(seriesId: number): Promise<EpisodeResult[]> {
     try {
       const response = await this.axios.get<EpisodeResult[]>('/episode', {

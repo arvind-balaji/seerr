@@ -30,6 +30,12 @@ export interface RadarrMovie {
   added: string;
   hasFile: boolean;
   tags: number[];
+  status?: 'tba' | 'announced' | 'inCinemas' | 'released' | 'deleted';
+  minimumAvailability?: string;
+  inCinemas?: string;
+  digitalRelease?: string;
+  physicalRelease?: string;
+  lastSearchTime?: string;
   movieFile?: {
     id: number;
     movieId: number;
@@ -286,6 +292,18 @@ class RadarrAPI extends ServarrBase<{ movieId: number }> {
       );
     }
   }
+  /** Switches the movie to another quality profile; returns the previous one. */
+  public async setQualityProfile(
+    movieId: number,
+    qualityProfileId: number
+  ): Promise<number> {
+    const movie = await this.getMovie({ id: movieId });
+    const previous = movie.qualityProfileId;
+    await this.axios.put(`/movie/${movieId}`, { ...movie, qualityProfileId });
+    this.clearCache({ externalId: movieId });
+    return previous;
+  }
+
   public removeMovie = async (tmdbId: number): Promise<void> => {
     const { id, title } = await this.getMovieByTmdbId(tmdbId);
 

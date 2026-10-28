@@ -1,0 +1,1187 @@
+[
+  {
+    "title": "Hoodwinked.2005.BluRay.1080i.DTS-HD.MA.5.1.AVC.REMUX-FraMeSToR-AsRequested",
+    "size": 18039742000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Remux-1080p is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "Remux-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1901,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.BluRay.1080p.DTSHD-MA.h264.Remux-HiFi-AsRequested",
+    "size": 10689645000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Remux-1080p is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "Remux-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1901,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.BluRay.DDP.5.1.x265-EDGE2020",
+    "size": 4100354000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "3.8 GB is smaller than minimum allowed 4.0 GB (for Hoodwinked!)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked 2005 [1080p BluRay x265 HEVC 10bit AAC 5.1 Koyumu]",
+    "size": 2121446000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "2.0 GB is smaller than minimum allowed 4.0 GB (for Hoodwinked!)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      },
+      {
+        "name": "French"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.BluRay.x265",
+    "size": 1488759000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.4 GB is smaller than minimum allowed 4.0 GB (for Hoodwinked!)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.BluRay.x265",
+    "size": 1488759000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.4 GB is smaller than minimum allowed 4.0 GB (for Hoodwinked!)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.HDDVD.x264-hV.[NORAR]",
+    "size": 5174003000,
+    "approved": true,
+    "temporarilyRejected": false,
+    "rejections": [],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.BluRay.x264-OFT",
+    "size": 3849835000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "3.6 GB is smaller than minimum allowed 4.0 GB (for Hoodwinked!)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.BluRay.HebDub.x264-iSrael-AlteZachen",
+    "size": 3401324000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "3.2 GB is smaller than minimum allowed 4.0 GB (for Hoodwinked!)",
+      "English is wanted, but found Hebrew"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Hebrew"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.BluRay.HebDub.x264-iSrael-AlteZachen",
+    "size": 3401324000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "3.2 GB is smaller than minimum allowed 4.0 GB (for Hoodwinked!)",
+      "English is wanted, but found Hebrew"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Hebrew"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.BluRay.H264.AAC",
+    "size": 1827801000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.7 GB is smaller than minimum allowed 4.0 GB (for Hoodwinked!)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.BluRay.H264.AAC",
+    "size": 1827801000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.7 GB is smaller than minimum allowed 4.0 GB (for Hoodwinked!)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.MULTi.1080p.BluRay.x264-FHD",
+    "size": 5376650000,
+    "approved": true,
+    "temporarilyRejected": false,
+    "rejections": [],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      },
+      {
+        "name": "French"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.HDDVD.x264-hV",
+    "size": 5226870000,
+    "approved": true,
+    "temporarilyRejected": false,
+    "rejections": [],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.1080p.BluRay.H264.AAC",
+    "size": 1660036352,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.5 GB is smaller than minimum allowed 4.0 GB (for Hoodwinked!)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 89,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked 2005 3A 1080p BluRay DTS AC3 x264",
+    "size": 5006679040,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Not enough seeders: 0. Minimum seeders: 1"],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.2005.720p.HDDVD.x264.REPACK-hV",
+    "size": 5208755000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Bluray-720p is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1502,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.720p.HDDVD.x264.REPACK-hV",
+    "size": 2561554000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Bluray-720p is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1502,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.720p.HDDVD.Hebrew.Dubbed.Also.English.x264-Extinct",
+    "size": 2980120000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Bluray-720p is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "English"
+      },
+      {
+        "name": "Hebrew"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.BluRay.810p.DTS.x264-PRoDJi",
+    "size": 3575674000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Bluray-720p is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.720p.HDDVD.Hebrew.Dubbed.Also.English.x264-Extinct",
+    "size": 3372880000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Bluray-720p is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "English"
+      },
+      {
+        "name": "Hebrew"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked 2005 720p BluRay DD 5 1 x264-GeneMige",
+    "size": 3433417984,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Bluray-720p is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 17,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked 2005 m1080p BluRay DD 5 1 x264-GeneMige",
+    "size": 1920519808,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.8 GB is smaller than minimum allowed 2.0 GB (for Hoodwinked!)",
+      "Bluray-720p is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 6,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked 2005 HDDVD Rip H264 AAC - IceBane (Kingdom Release)",
+    "size": 1804474624,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.7 GB is smaller than minimum allowed 2.0 GB (for Hoodwinked!)",
+      "Bluray-720p is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 2,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.2005.720p.BluRay.H264.AAC",
+    "size": 1052490560,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1,003.7 MB is smaller than minimum allowed 2.0 GB (for Hoodwinked!)",
+      "Bluray-720p is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 3,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked[2005]m-720p x264 350mb",
+    "size": 368247872,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "351.2 MB is smaller than minimum allowed 1.4 GB (for Hoodwinked!)",
+      "HDTV-720p is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "HDTV-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1301,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.2005.WIDESCREEN.NTSC.USA.DVD9-AndreMor",
+    "size": 9094109000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "8.5 GB is larger than maximum allowed 7.9 GB (for Hoodwinked!)",
+      "DVD-R is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD-R",
+        "resolution": 480
+      }
+    },
+    "qualityWeight": 901,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.SE.NO.DK.ENG.READ.NFO.NORDiC.PAL.DVDR-NEUROLEPTiKA",
+    "size": 5083071000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["DVD-R is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "DVD-R",
+        "resolution": 480
+      }
+    },
+    "qualityWeight": 901,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked.2005.SE.NO.DK.ENG.READ.NFO.NORDiC.PAL.DVDR-NEUROLEPTiKA",
+    "size": 5125243000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["DVD-R is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "DVD-R",
+        "resolution": 480
+      }
+    },
+    "qualityWeight": 901,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked 2005 SE NO DK ENG NORDiC PAL DVDR",
+    "size": 4680216576,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "DVD-R is not wanted in profile",
+      "Raw Bluray/DVD release",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD-R",
+        "resolution": 480
+      }
+    },
+    "qualityWeight": 901,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.2005.DVDSCR.CUSTOM.SWESUB.DVDr-RoS",
+    "size": 3260629248,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Hardcode subs found: SWESUB",
+      "DVD-R is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD-R",
+        "resolution": 480
+      }
+    },
+    "qualityWeight": 901,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked[2005]DvDrip.AC3[Eng]-aXXo",
+    "size": 733553408,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["DVD is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 7,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked[2005]DvDrip.AC3[Eng]-aXXo",
+    "size": 733548544,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "DVD is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.The.True.Story.2005.SWEDISH.DVDRip.XviD-andreaspeters",
+    "size": 732166976,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "English is wanted, but found Swedish",
+      "DVD is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "Swedish"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.2005.Norsub.DvDRip.XviD-ToNk",
+    "size": 731476096,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Hardcode subs found: Norsub",
+      "DVD is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.2005.SWEDiSH.DVDRip.XviD-roXer",
+    "size": 748953792,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "English is wanted, but found Swedish",
+      "DVD is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "Swedish"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked[2005]DvDrip.AC3[Eng]-aXXo",
+    "size": 733553408,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "DVD is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked[2005]DVDRip[Eng]-HUNTER17 - NLT Release",
+    "size": 734417024,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "DVD is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.2005.DvDrip.H264-{deff}(PURE RG)",
+    "size": 366995456,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["DVD is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 1,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.2005.DVDRip.x264.VoRbis.MatRoska.NhaNc3",
+    "size": 482816000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "DVD is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "TÃ¤itsa metsas! (Hoodwinked) 2005.avi",
+    "size": 734219840,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "SDTV is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "SDTV",
+        "resolution": 480
+      }
+    },
+    "qualityWeight": 701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked 2005 DVDR R4 NTSC",
+    "size": 4518169600,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "REGIONAL is not wanted in profile",
+      "Raw Bluray/DVD release",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "REGIONAL",
+        "resolution": 480
+      }
+    },
+    "qualityWeight": 501,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked_1_2005_English_XviD",
+    "size": 835723000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Unknown is not wanted in profile"],
+    "quality": {
+      "quality": {
+        "name": "Unknown",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 1,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Hoodwinked-Kokkinoskoufitsa (2005) Greek Audio-Metaglotismeno",
+    "size": 1208253056,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "English is wanted, but found Greek",
+      "Unknown is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Unknown",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 1,
+    "languages": [
+      {
+        "name": "Greek"
+      }
+    ],
+    "seeders": 7,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked_(2005)_(Dutchsubs-Changea)-WaRlOrD",
+    "size": 3797343232,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Hardcode subs found: Dutchsubs",
+      "English is wanted, but found Dutch",
+      "Unknown is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Unknown",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 1,
+    "languages": [
+      {
+        "name": "Dutch"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked 2005 HDDVDrip [ResourceRG H264]",
+    "size": 1619541760,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Unknown",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 1,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked! (2005) (Rus)",
+    "size": 1468399616,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "English is wanted, but found Russian",
+      "Unknown is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Unknown",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 1,
+    "languages": [
+      {
+        "name": "Russian"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked 2005 XviD NL Subs [befje] TBS",
+    "size": 737680832,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown is not wanted in profile",
+      "Not enough seeders: 0. Minimum seeders: 1"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Unknown",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 1,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.The.True.Story.2005.SWESUB.DVDRip.XviD-Breiner",
+    "size": 1454360448,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked.The.True.Story.2005.SWEDISH.DVDRip.XviD-Bambi90",
+    "size": 1454294912,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "Swedish"
+      }
+    ],
+    "seeders": 0,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hoodwinked the Movie - DvdRip - ENG - FRA - DivX",
+    "size": 1867494000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Unable to parse release"],
+    "quality": {
+      "quality": {
+        "name": "DVD",
+        "resolution": 0
+      }
+    },
+    "qualityWeight": 801,
+    "languages": [
+      {
+        "name": "English"
+      },
+      {
+        "name": "French"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  }
+]

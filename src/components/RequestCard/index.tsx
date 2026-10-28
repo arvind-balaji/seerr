@@ -68,7 +68,7 @@ interface RequestCardErrorProps {
 }
 
 const RequestCardError = ({ requestData }: RequestCardErrorProps) => {
-  const { hasPermission } = useUser();
+  const { user, hasPermission } = useUser();
   const intl = useIntl();
 
   const { mediaUrl: plexUrl, mediaUrl4k: plexUrl4k } = useDeepLinks({
@@ -172,6 +172,13 @@ const RequestCardError = ({ requestData }: RequestCardErrorProps) => {
                           ? requestData.media.serviceUrl4k
                           : requestData.media.serviceUrl
                       }
+                      diagnosis={
+                        requestData.media[
+                          requestData.is4k ? 'diagnosis4k' : 'diagnosis'
+                        ]
+                      }
+                      mediaId={requestData.media?.id}
+                      isRequester={requestData.requestedBy?.id === user?.id}
                     />
                   )}
                 </div>
@@ -474,6 +481,13 @@ const RequestCard = ({ request, onTitleData }: RequestCardProps) => {
                     ? requestData.media.serviceUrl4k
                     : requestData.media.serviceUrl
                 }
+                diagnosis={
+                  requestData.media[
+                    requestData.is4k ? 'diagnosis4k' : 'diagnosis'
+                  ]
+                }
+                mediaId={requestData.media?.id}
+                isRequester={requestData.requestedBy?.id === user?.id}
               />
             )}
           </div>

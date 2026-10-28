@@ -1,0 +1,2049 @@
+[
+  {
+    "title": "Spider-Man.Brand.New.Day.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 3188249856,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [x265 (HD)]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 3796,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Spider-Man Brand New Day (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2870563584,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [x265 (HD)]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 7935,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Spider-Man: Brand New Day 2026.1080p.HQ Pre.Multi.AAC 2.0.x264",
+    "size": 3808117248,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "3.5 GB is smaller than minimum allowed 4.8 GB (for Spider-Man: Brand New Day)",
+      "HDTV-1080p is not wanted in profile",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [x265 (HD)]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "HDTV-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1601,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 3268,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Spider-Man Brand New Day 2026 V3 1080p TELESYNC x264-DKS",
+    "size": 6311409664,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "TELESYNC is not wanted in profile",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [x265 (HD)]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "TELESYNC",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 303,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 908,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Obsession 2026 1080p WEB-DL HEVC x265 5.1 BONE",
+    "size": 1675015808,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [x265 (HD)]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 1175,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Obsession.2026.1080p.AMZN.WEB-DL.DDP5.1.H264.MP4-BTM",
+    "size": 5321218560,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [x265 (HD)]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 4181,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Backrooms.2026.2160p.iT.WEB-DL.DDP5.1.Atmos.H.265-RDNYB",
+    "size": 10482662400,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "WEBDL-2160p is not wanted in profile",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2101,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 1388,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Backrooms (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2186714880,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 3298,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Backrooms 2026 1080p VOSTFR HDSCR x264-FS",
+    "size": 2032897664,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "1.9 GB is smaller than minimum allowed 3.7 GB (for Backrooms)",
+      "HDTV-1080p is not wanted in profile",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "HDTV-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1601,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 816,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Toy Story 5 (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2049055616,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [x265 (HD)]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 1883,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Toy.Story.5.2026.1080p.DCPRIP.x264-FS",
+    "size": 4071706368,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "HDTV-1080p is not wanted in profile",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [x265 (HD)]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "HDTV-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1601,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 876,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Avatar.Aang.The.Last.Airbender.2026.1080p.WEBRip.10bits.x265-Rapta",
+    "size": 811197440,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "773.6 MB is smaller than minimum allowed 1.2 GB (for Avatar Aang: The Last Airbender)",
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 791,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Avatar.The.Legend.of.Aang.The.Last.Airbender.2026.1080p.PMNTP.WEBRip.AAC2.0.H264-[LEAK].mp4",
+    "size": 3406311680,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 1690,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Michael (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2549740288,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 1463,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Minions &amp; Monsters (2026) [1080p] [WEBRip] [5.1]",
+    "size": 1834670208,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Wrong movie"],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 1190,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Super Mario Galaxy Movie 2026 1080p Webrip HEVC x265-RMTeam",
+    "size": 2519138560,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [x265 (HD)]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 1024,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Super Mario Galaxy Movie (2026) [1080p] [WEBRip] [5.1]",
+    "size": 1946765952,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) [x265 (HD)]",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 777,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Drama (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2091716992,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Existing file meets cutoff: WEB 1080p (WEBDL-1080p, WEBRip-1080p) []",
+      "Wrong movie"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": 985,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Project Hail Mary (2026) [1080p] [WEBRip] [5.1]",
+    "size": 3099996160,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 3635,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Odyssey.2026.1080p.TELESYNC.HEVC.AAC2.0-SPLiCE",
+    "size": 5968901120,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "TELESYNC",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 301,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 3534,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Invite (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2120860160,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 2996,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Runner (2026) [1080p] [WEBRip] [5.1]",
+    "size": 1954888832,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 2964,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Coyote.vs.Acme.2026.1080p.DCPRIP.HEVC.x265.RMTeam",
+    "size": 1639238656,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "HDTV-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1601,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 2879,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Buddy.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 1689979136,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 2802,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Disclosure Day (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2881384704,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 2590,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Mutiny (2026) [1080p] [WEBRip] [5.1]",
+    "size": 1881312128,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 2582,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Coyote vs. Acme (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2037086464,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 2037,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Matchbox The Movie 2026 1080p WEB-DL HEVC x265 5.1 BONE",
+    "size": 2264302080,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1964,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Odyssey 2026 1080p AMZN WEB-DL DDP5 1 H 264-Kitsune",
+    "size": 4673212416,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1941,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Supergirl (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2142978432,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1900,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Mayday 2026 1080p WEB-DL HEVC x265 5.1 BONE",
+    "size": 2147923200,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1837,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Mandalorian and Grogu (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2615238400,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1762,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Masters of the Universe (2026) [1080p] [WEBRip]",
+    "size": 2509859072,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1710,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Death of Robin Hood (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2412459520,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1618,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Animals (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2144911616,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1590,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hope 2026 1080p Korean WEB-DL HEVC x265 5.1 BONE",
+    "size": 2138579200,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Korean"
+      }
+    ],
+    "seeders": 1586,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Sheep.Detectives.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 1823851392,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1557,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Tenzing (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2487745024,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1539,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Matchbox the Movie (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2501048832,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1511,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Colony.2026.1080p.Korean.WEBRip.10bit.AAC2.0.x265-FaS",
+    "size": 1794879488,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Korean"
+      }
+    ],
+    "seeders": 1442,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Forgotten.Island.2026.1080p.MA.WEB-DL.DDP5.1.Atmos.H264.MP4-BTM",
+    "size": 6897654272,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1419,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Verity 2026 1080p AMZN WEB-DL DDP5 1 Atmos H 264-BYNDR",
+    "size": 8904463360,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1410,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Scary Movie (2026) [1080p] [WEBRip] [5.1]",
+    "size": 1897526528,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1401,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Fall.2.Deadpoint.2026.1080p.WEBRip.DD5.1.10bits.x265-Rapta",
+    "size": 1300520960,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1394,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Coyote vs Acme 2026 1080p AMZN WEB-DL DDP5 1 Atmos H 264-BYNDR",
+    "size": 7840611840,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1383,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Odyssey (2026) 1080p WEBRip x265 10bit 5.1-LAMA",
+    "size": 1542743040,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1344,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Practical.Magic.2.2026.1080p.WEBRip.AAC5.1.10bits.x265-Rapta",
+    "size": 1322914688,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1301,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Devil Wears Prada 2 (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2380962560,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1287,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Buddy (2026) [1080p] [WEBRip] [5.1]",
+    "size": 1896724608,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1272,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Project Hail Mary 2026 1080p WEB Line AC3 H264-DJT",
+    "size": 9765757952,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1243,
+    "protocol": "torrent"
+  },
+  {
+    "title": "In the Grey (2026) [1080p] [WEBRip] [5.1]",
+    "size": 1917110784,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1212,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Evil Dead Burn (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2187701760,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1195,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Moana.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 2120338176,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1167,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Uprising 2026 1080p WEB-DL HEVC x265 5.1 BONE",
+    "size": 2291863552,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1159,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Mortal Kombat II (2026) [REPACK] [1080p] [WEBRip] [x265] [10bit] [5.1]",
+    "size": 2074270208,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1702,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1121,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Tony.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 1886883456,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1028,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Citizen.Vigilante.2026.1080p.10bit.DDP5.1.x265.FaS",
+    "size": 1301473408,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "HDTV-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1601,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 988,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hopeu.2026.1080p.AMZN.WEB-DL.DD+5.1.H.264-playWEB",
+    "size": 10139834368,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 976,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hope (2026) (1080p AMZN WEB-DL x265 10bit EAC3 5.1 Korean Silence) [QxR]",
+    "size": 7234108416,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Korean"
+      }
+    ],
+    "seeders": 961,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Practical Magic 2 (2026) [1080p] [BluRay] [5.1]",
+    "size": 2576991232,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 942,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Batman.Knightfall.Part.1.Knightfall.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 1002743808,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 940,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Dog Stars 2026 1080p AMZN WEB-DL DDP5 1 H 264-KyoGo",
+    "size": 7828718080,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 926,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Hokum (2026) [1080p] [WEBRip]",
+    "size": 1920198528,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 912,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The.Dog.Stars.2026.2160p.AMZN.WEB-DL.DV.HDR10+.LAT.DDP5.1.H265.MP4-BTM",
+    "size": 19423877120,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2101,
+    "languages": [
+      {
+        "name": "Latvian"
+      }
+    ],
+    "seeders": 908,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Mutiny 2026 1080p WEB-DL HEVC x265 5.1 BONE",
+    "size": 1497815936,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 904,
+    "protocol": "torrent"
+  },
+  {
+    "title": "One.Night.Only.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 1832926976,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 902,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The End Of Oak Street 2026 1080p WEB-DL HEVC x265 5.1 BONE",
+    "size": 2118473728,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 900,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Teenage.Sex.and.Death.at.Camp.Miasma.2026.1080p.WEBRip.10Bit.AAC.x265-NeoNoir",
+    "size": 1848242816,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 893,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Animals.2026.1080p.WEBRip.10Bit.DDP5.1.Atmos.x265-NeoNoir",
+    "size": 1776106112,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 893,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Disclosure.Day.2026.1080p.MA.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 2727500800,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 882,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Pressure (2026) [1080p] [WEBRip] [5.1]",
+    "size": 1992978560,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 880,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Tenzing.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 2089300352,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 880,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Project.Hail.Mary.2026.PROPER.HDR.2160p.WEB.h265-GRACE",
+    "size": 29619884032,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2102,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 868,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Crime 101 2026 1080p WEB Line HEVC x265 BONE",
+    "size": 2093949184,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 866,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Send Help 2026 1080p WEB-DL HEVC x265 5.1 BONE",
+    "size": 1789820928,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 861,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The End Of Oak Street 2026 1080p WEB-DL HEVC x265 10Bit DDP5.1 Subs KINGDOM",
+    "size": 5695680000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 857,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Batman Knightfall, Part 1 (2026) [1080p] [WEBRip] [5.1]",
+    "size": 1556974080,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 845,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Coyote.vs.Acme.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 1989591552,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 817,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Runner 2026 1080p WEB-DL HEVC x265 5.1 BONE",
+    "size": 1604101760,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 812,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Citizen.Vigilante.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 2013234176,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 762,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Leviticus.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 1424627968,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 757,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Punisher One Last Kill (2026) [2160p] [WEBRip] [x265] [10bit] [5.1]",
+    "size": 2307849728,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2101,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 753,
+    "protocol": "torrent"
+  },
+  {
+    "title": "The Mongoose 2026 1080p WEBRip AAC2.0 H265",
+    "size": 1618393728,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 749,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Project.Hail.Mary.2026.2160p.WEB-DL.DDP5.1.Atmos.H.265-RDNYB",
+    "size": 25055438848,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-2160p",
+        "resolution": 2160
+      }
+    },
+    "qualityWeight": 2101,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 737,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Swapped (2026) [1080p] [WEBRip] [5.1]",
+    "size": 2017200512,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 735,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Onslaught.2026.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir",
+    "size": 1913831424,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 731,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Backrooms 2026 1080p AMZN WEB-DL DDP5 1 Atmos H 264-BYNDR",
+    "size": 7920992768,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 722,
+    "protocol": "torrent"
+  },
+  {
+    "title": "Jackass Best and Last (2026) [1080p] [WEBRip] [5.1]",
+    "size": 1890300544,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBRip-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 718,
+    "protocol": "torrent"
+  }
+]

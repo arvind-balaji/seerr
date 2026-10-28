@@ -43,6 +43,9 @@ export const messages = defineMessages('components.PermissionEdit', {
   autoapprove4kSeries: 'Auto-Approve 4K Series',
   autoapprove4kSeriesDescription:
     'Grant automatic approval for 4K series requests.',
+  remediateRequests: 'Fix Own Requests',
+  remediateRequestsDescription:
+    'Grant permission to fix their own stuck requests: search again, or accept a lower-quality or other-language release when an admin has set fallback profiles.',
   request4k: 'Request 4K',
   request4kDescription: 'Grant permission to submit requests for 4K media.',
   request4kMovies: 'Request 4K Movies',
@@ -181,6 +184,14 @@ export const PermissionEdit = ({
           name: intl.formatMessage(messages.requestTv),
           description: intl.formatMessage(messages.requestTvDescription),
           permission: Permission.REQUEST_TV,
+        },
+        {
+          id: 'remediate-requests',
+          name: intl.formatMessage(messages.remediateRequests),
+          description: intl.formatMessage(
+            messages.remediateRequestsDescription
+          ),
+          permission: Permission.REMEDIATE_REQUESTS,
         },
       ],
     },

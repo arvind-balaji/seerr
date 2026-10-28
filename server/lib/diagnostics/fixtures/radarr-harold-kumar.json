@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Harold.Kumar.Go.To.Amsterdam.[2008].BLURAY.1080p.BluRay.5.1-LAMA",
+    "size": 244420000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "233.1 MB is smaller than minimum allowed 609.6 MB (for Harold & Kumar Go to Amsterdam)"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1801,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Harold.Kumar.Go.To.Amsterdam.[2008].BLURAY.720p.BluRay-LAMA",
+    "size": 119980000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "114.4 MB is smaller than minimum allowed 308.4 MB (for Harold & Kumar Go to Amsterdam)",
+      "Bluray-720p is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "English"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "Harold.and.Kumar.Triology.720p.BluRay.x264",
+    "size": 15425469000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": ["Unable to parse release"],
+    "quality": {
+      "quality": {
+        "name": "Bluray-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1501,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  }
+]

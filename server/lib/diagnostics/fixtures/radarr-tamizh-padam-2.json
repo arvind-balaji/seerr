@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Tamizh.Padam.2.2018.720p.AMZN.WEB-DL.DD+5.1.H264-BeAsT",
+    "size": 5723403000,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "English is wanted, but found Tamil",
+      "WEBDL-720p is not wanted in profile"
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-720p",
+        "resolution": 720
+      }
+    },
+    "qualityWeight": 1401,
+    "languages": [
+      {
+        "name": "Tamil"
+      }
+    ],
+    "seeders": null,
+    "protocol": "usenet"
+  },
+  {
+    "title": "4 20 Massacre 2018 1080p PCOK WEB-DL AAC 2 0 H 264-OnlyWeb",
+    "size": 5027249664,
+    "approved": false,
+    "temporarilyRejected": false,
+    "rejections": [
+      "Unknown Movie. Unable to identify correct movie using release name."
+    ],
+    "quality": {
+      "quality": {
+        "name": "WEBDL-1080p",
+        "resolution": 1080
+      }
+    },
+    "qualityWeight": 1701,
+    "languages": [
+      {
+        "name": "Unknown"
+      }
+    ],
+    "seeders": 1,
+    "protocol": "torrent"
+  }
+]

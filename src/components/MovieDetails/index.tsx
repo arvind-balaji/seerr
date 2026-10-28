@@ -20,6 +20,7 @@ import ManageSlideOver from '@app/components/ManageSlideOver';
 import MediaSlider from '@app/components/MediaSlider';
 import PersonCard from '@app/components/PersonCard';
 import RequestButton from '@app/components/RequestButton';
+import DiagnosisCallout from '@app/components/RequestDiagnosis/DiagnosisCallout';
 import Slider from '@app/components/Slider';
 import StatusBadge from '@app/components/StatusBadge';
 import useDeepLinks from '@app/hooks/useDeepLinks';
@@ -517,6 +518,11 @@ const MovieDetails = ({ movie }: MovieDetailsProps) => {
               mediaType="movie"
               plexUrl={plexUrl}
               serviceUrl={data.mediaInfo?.serviceUrl}
+              diagnosis={data.mediaInfo?.diagnosis}
+              mediaId={data.mediaInfo?.id}
+              isRequester={(data.mediaInfo?.requests ?? []).some(
+                (r) => r.requestedBy?.id === user?.id && r.is4k === false
+              )}
             />
             {settings.currentSettings.movie4kEnabled &&
               hasPermission(
@@ -541,6 +547,11 @@ const MovieDetails = ({ movie }: MovieDetailsProps) => {
                   mediaType="movie"
                   plexUrl={plexUrl4k}
                   serviceUrl={data.mediaInfo?.serviceUrl4k}
+                  diagnosis={data.mediaInfo?.diagnosis4k}
+                  mediaId={data.mediaInfo?.id}
+                  isRequester={(data.mediaInfo?.requests ?? []).some(
+                    (r) => r.requestedBy?.id === user?.id && r.is4k === true
+                  )}
                 />
               )}
           </div>
@@ -690,6 +701,11 @@ const MovieDetails = ({ movie }: MovieDetailsProps) => {
       </div>
       <div className="media-overview">
         <div className="media-overview-left">
+          <DiagnosisCallout
+            media={data.mediaInfo}
+            title={data.title}
+            onChange={() => revalidate()}
+          />
           {data.tagline && <div className="tagline">{data.tagline}</div>}
           <h2>{intl.formatMessage(messages.overview)}</h2>
           <p>

@@ -10,6 +10,8 @@ import { getRepository } from '@server/datasource';
 import { Blocklist } from '@server/entity/Blocklist';
 import type { User } from '@server/entity/User';
 import { Watchlist } from '@server/entity/Watchlist';
+import { stripDiagnosis } from '@server/lib/diagnostics/strip';
+import type { Diagnosis } from '@server/lib/diagnostics/types';
 import type { DownloadingItem } from '@server/lib/downloadtracker';
 import downloadTracker from '@server/lib/downloadtracker';
 import { Permission } from '@server/lib/permissions';
@@ -217,6 +219,13 @@ class Media {
 
   @Column({ nullable: true, type: 'varchar' })
   public jellyfinMediaId4k?: string | null;
+
+  /** Why the request hasn't arrived yet; see server/lib/diagnostics. */
+  @Column({ type: 'simple-json', nullable: true })
+  public diagnosis?: Diagnosis | null;
+
+  @Column({ type: 'simple-json', nullable: true })
+  public diagnosis4k?: Diagnosis | null;
 
   public serviceUrl?: string;
   public serviceUrl4k?: string;
@@ -438,8 +447,15 @@ class Media {
         { type: 'or' }
       ) ?? false;
 
+    const isManager = user?.hasPermission(Permission.MANAGE_REQUESTS) ?? false;
+
     return {
       ...this,
+      // Release names and raw rejection reasons are for request managers.
+      diagnosis: isManager ? this.diagnosis : stripDiagnosis(this.diagnosis),
+      diagnosis4k: isManager
+        ? this.diagnosis4k
+        : stripDiagnosis(this.diagnosis4k),
       requests: (this.requests ?? []).map((request) => ({
         ...request,
         requestedBy: request.requestedBy?.filter(),

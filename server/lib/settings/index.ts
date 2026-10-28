@@ -84,6 +84,12 @@ export interface DVRSettings {
   preventSearch: boolean;
   tagRequests: boolean;
   overrideRule: number[];
+  /** Profile a requester may switch to when only lower quality exists. */
+  fallbackQualityProfileId?: number;
+  fallbackQualityProfileName?: string;
+  /** Profile a requester may switch to when only other languages exist. */
+  fallbackLanguageProfileId?: number;
+  fallbackLanguageProfileName?: string;
 }
 
 export interface RadarrSettings extends DVRSettings {
@@ -372,7 +378,8 @@ export type JobId =
   | 'jellyfin-full-scan'
   | 'image-cache-cleanup'
   | 'availability-sync'
-  | 'process-blocklisted-tags';
+  | 'process-blocklisted-tags'
+  | 'request-diagnostics';
 
 export interface AllSettings {
   clientId: string;
@@ -613,6 +620,9 @@ class Settings {
         },
         'process-blocklisted-tags': {
           schedule: '0 30 1 */7 * *',
+        },
+        'request-diagnostics': {
+          schedule: '0 20 */6 * * *',
         },
       },
       network: {

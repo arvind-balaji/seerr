@@ -1,6 +1,7 @@
 import { MediaServerType } from '@server/constants/server';
 import blocklistedTagsProcessor from '@server/job/blocklistedTagsProcessor';
 import availabilitySync from '@server/lib/availabilitySync';
+import requestDiagnostics from '@server/lib/diagnostics';
 import downloadTracker from '@server/lib/downloadtracker';
 import ImageProxy from '@server/lib/imageproxy';
 import refreshToken from '@server/lib/refreshToken';
@@ -192,6 +193,23 @@ export const startJobs = (): void => {
     }),
     running: () => availabilitySync.running,
     cancelFn: () => availabilitySync.cancel(),
+  });
+
+  // Explain stuck requests and search again for ones Radarr/Sonarr gave up on
+  scheduledJobs.push({
+    id: 'request-diagnostics',
+    name: 'Request Diagnostics',
+    type: 'process',
+    interval: 'hours',
+    cronSchedule: jobs['request-diagnostics'].schedule,
+    job: schedule.scheduleJob(jobs['request-diagnostics'].schedule, () => {
+      logger.info('Starting scheduled job: Request Diagnostics', {
+        label: 'Jobs',
+      });
+      requestDiagnostics.run();
+    }),
+    running: () => requestDiagnostics.running,
+    cancelFn: () => requestDiagnostics.cancel(),
   });
 
   // Run download sync every minute

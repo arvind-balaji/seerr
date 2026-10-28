@@ -62,6 +62,8 @@ interface QueueItem {
   downloadClient: string;
   indexer: string;
   id: number;
+  errorMessage?: string;
+  statusMessages?: { title: string; messages: string[] }[];
 }
 
 export interface Tag {
@@ -176,6 +178,49 @@ class ServarrBase<QueueItemAppendT> extends ExternalAPI {
     } catch (e) {
       throw new Error(
         `[${this.apiName}] Failed to retrieve queue: ${e.message}`,
+        { cause: e }
+      );
+    }
+  };
+
+  /**
+   * Queue entries for one title (`/queue/details`), including import problems.
+   * `params` is `{ movieId }` for Radarr or `{ seriesId }` for Sonarr.
+   */
+  public getQueueDetails = async (
+    params: Record<string, number>
+  ): Promise<(QueueItem & QueueItemAppendT)[]> => {
+    try {
+      const response = await this.axios.get<(QueueItem & QueueItemAppendT)[]>(
+        '/queue/details',
+        { params: { ...params, includeEpisode: true } }
+      );
+      return response.data;
+    } catch (e) {
+      throw new Error(
+        `[${this.apiName}] Failed to retrieve queue details: ${e.message}`,
+        { cause: e }
+      );
+    }
+  };
+
+  /**
+   * Runs an interactive search (`GET /release`): asks every indexer and returns
+   * each release with the reasons it would be rejected. Nothing is grabbed, but
+   * it is slow and counts against indexer API limits, so callers rate-limit it.
+   */
+  public getReleases = async <T>(
+    params: Record<string, number>
+  ): Promise<T[]> => {
+    try {
+      const response = await this.axios.get<T[]>('/release', {
+        params,
+        timeout: 180000,
+      });
+      return response.data;
+    } catch (e) {
+      throw new Error(
+        `[${this.apiName}] Failed to search releases: ${e.message}`,
         { cause: e }
       );
     }

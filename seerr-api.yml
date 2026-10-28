@@ -2271,6 +2271,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MainSettings'
+  /settings/cleanup:
+    get:
+      summary: Get library cleanup settings
+      tags:
+        - settings
+      responses:
+        '200':
+          description: Cleanup settings
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      summary: Update library cleanup settings
+      tags:
+        - settings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Updated cleanup settings
+          content:
+            application/json:
+              schema:
+                type: object
   /settings/network:
     get:
       summary: Get network settings
@@ -7584,6 +7613,71 @@ paths:
           description: Action not allowed
         '404':
           description: Media does not exist
+  /media/{mediaId}/cleanup:
+    post:
+      summary: Keep or protect a title from library cleanup
+      description: Keep a title that is leaving (any user who can request, limited per user), or protect it permanently (request managers).
+      tags:
+        - media
+      parameters:
+        - in: path
+          name: mediaId
+          required: true
+          example: '1'
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - action
+              properties:
+                action:
+                  type: string
+                  enum:
+                    - keep
+                    - unkeep
+                    - protect
+                    - unprotect
+      responses:
+        '200':
+          description: The title's new cleanup state
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cleanup:
+                    type: object
+                    nullable: true
+        '403':
+          description: Action not allowed
+        '409':
+          description: Title is not leaving
+        '429':
+          description: Keep limit reached
+  /cleanup:
+    get:
+      summary: Library cleanup status
+      description: Titles leaving soon; request managers also get disk usage, the next titles in line, and kept, protected and removed titles.
+      tags:
+        - media
+      parameters:
+        - in: query
+          name: summary
+          schema:
+            type: string
+          description: Only return the mode and the viewer's keep allowance.
+      responses:
+        '200':
+          description: Cleanup status
+          content:
+            application/json:
+              schema:
+                type: object
   /collection/{collectionId}:
     get:
       summary: Get collection details

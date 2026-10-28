@@ -103,6 +103,23 @@ settingsRoutes.post('/network', async (req, res) => {
   return res.status(200).json(settings.network);
 });
 
+settingsRoutes.get('/cleanup', (_req, res) => {
+  res.status(200).json(getSettings().cleanup);
+});
+
+settingsRoutes.post('/cleanup', async (req, res, next) => {
+  const settings = getSettings();
+  if (
+    req.body.mode !== undefined &&
+    !['off', 'preview', 'live'].includes(req.body.mode)
+  ) {
+    return next({ status: 400, message: 'Invalid cleanup mode.' });
+  }
+  settings.cleanup = merge(settings.cleanup, req.body);
+  await settings.save();
+  return res.status(200).json(settings.cleanup);
+});
+
 settingsRoutes.post('/main/regenerate', async (req, res, next) => {
   const settings = getSettings();
 

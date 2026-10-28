@@ -17,6 +17,8 @@ import Tag from '@app/components/Common/Tag';
 import Tooltip from '@app/components/Common/Tooltip';
 import ExternalLinkBlock from '@app/components/ExternalLinkBlock';
 import IssueModal from '@app/components/IssueModal';
+import CleanupCallout from '@app/components/LibraryCleanup/CleanupCallout';
+import LeavingBadge from '@app/components/LibraryCleanup/LeavingBadge';
 import ManageSlideOver from '@app/components/ManageSlideOver';
 import MediaSlider from '@app/components/MediaSlider';
 import PersonCard from '@app/components/PersonCard';
@@ -610,6 +612,7 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
                   )}
                 />
               )}
+            <LeavingBadge cleanup={data.mediaInfo?.cleanup} />
           </div>
           <h1 data-testid="media-title">
             {data.name}{' '}
@@ -754,6 +757,10 @@ const TvDetails = ({ tv }: TvDetailsProps) => {
       </div>
       <div className="media-overview">
         <div className="media-overview-left">
+          <CleanupCallout
+            media={data.mediaInfo}
+            onChange={() => revalidate()}
+          />
           <DiagnosisCallout
             media={data.mediaInfo}
             title={data.name}

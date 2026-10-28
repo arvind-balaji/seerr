@@ -51,6 +51,7 @@ export interface PublicSettingsResponse {
   youtubeUrl: string;
   versionCheck: boolean;
   plexClientIdentifier: string;
+  cleanupMode: 'off' | 'preview' | 'live';
 }
 
 export interface CacheItem {

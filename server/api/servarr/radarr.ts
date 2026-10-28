@@ -29,6 +29,8 @@ export interface RadarrMovie {
   qualityProfileId: number;
   added: string;
   hasFile: boolean;
+  sizeOnDisk?: number;
+  year?: number;
   tags: number[];
   status?: 'tba' | 'announced' | 'inCinemas' | 'released' | 'deleted';
   minimumAvailability?: string;
@@ -304,7 +306,10 @@ class RadarrAPI extends ServarrBase<{ movieId: number }> {
     return previous;
   }
 
-  public removeMovie = async (tmdbId: number): Promise<void> => {
+  public removeMovie = async (
+    tmdbId: number,
+    { addImportExclusion = false }: { addImportExclusion?: boolean } = {}
+  ): Promise<void> => {
     const { id, title } = await this.getMovieByTmdbId(tmdbId);
 
     if (!id) {
@@ -318,7 +323,7 @@ class RadarrAPI extends ServarrBase<{ movieId: number }> {
       await this.axios.delete(`/movie/${id}`, {
         params: {
           deleteFiles: true,
-          addImportExclusion: false,
+          addImportExclusion,
         },
       });
       logger.info(`[Radarr] Removed movie ${title}`);

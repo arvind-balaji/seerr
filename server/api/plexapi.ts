@@ -220,6 +220,113 @@ class PlexAPI extends ExternalAPI {
     return response.MediaContainer.Metadata;
   }
 
+  /** Rating keys of the items in a library that carry a label. */
+  public async getLabeledKeys(
+    sectionId: string,
+    label: string
+  ): Promise<Set<string>> {
+    const labels = (
+      await this.axios.get<{
+        MediaContainer: { Directory?: { key: string; title: string }[] };
+      }>(`/library/sections/${sectionId}/label`)
+    ).data.MediaContainer.Directory;
+    const match = labels?.find(
+      (l) => l.title.toLowerCase() === label.toLowerCase()
+    );
+    if (!match) return new Set();
+    const items = (
+      await this.axios.get<PlexLibraryResponse>(
+        `/library/sections/${sectionId}/all?label=${match.key}`
+      )
+    ).data.MediaContainer.Metadata;
+    return new Set((items ?? []).map((i) => String(i.ratingKey)));
+  }
+
+  /**
+   * Makes a manual collection hold exactly `ratingKeys`, creating it if
+   * needed. An empty list empties it but keeps it.
+   */
+  public async setCollectionItems({
+    sectionId,
+    type,
+    title,
+    summary,
+    ratingKeys,
+  }: {
+    sectionId: string;
+    type: 'movie' | 'show';
+    title: string;
+    summary: string;
+    ratingKeys: string[];
+  }): Promise<void> {
+    const { machineIdentifier } = (await this.getStatus()).MediaContainer;
+    const uri = (keys: string[]) =>
+      `server://${machineIdentifier}/com.plexapp.plugins.library/library/metadata/${keys.join(',')}`;
+    const collections = (
+      await this.axios.get<{
+        MediaContainer: { Metadata?: { ratingKey: string; title: string }[] };
+      }>(`/library/sections/${sectionId}/collections`)
+    ).data.MediaContainer.Metadata;
+    let collection = collections?.find((c) => c.title === title);
+
+    if (!collection) {
+      if (!ratingKeys.length) return;
+      collection = (
+        await this.axios.post<{
+          MediaContainer: { Metadata: { ratingKey: string; title: string }[] };
+        }>('/library/collections', null, {
+          params: {
+            type: type === 'movie' ? 1 : 2,
+            title,
+            smart: 0,
+            sectionId,
+            uri: uri(ratingKeys),
+          },
+        })
+      ).data.MediaContainer.Metadata[0];
+      // Show it on Home for everyone, like a recommendation row.
+      await this.axios
+        .post(`/hubs/sections/${sectionId}/manage`, null, {
+          params: {
+            metadataItemId: collection.ratingKey,
+            promotedToRecommended: 1,
+            promotedToOwnHome: 1,
+            promotedToSharedHome: 1,
+          },
+        })
+        .catch(() => undefined);
+    } else {
+      const current =
+        (
+          await this.axios.get<PlexLibraryResponse>(
+            `/library/collections/${collection.ratingKey}/children`
+          )
+        ).data.MediaContainer.Metadata?.map((m) => String(m.ratingKey)) ?? [];
+      for (const key of current.filter((k) => !ratingKeys.includes(k))) {
+        await this.axios.delete(
+          `/library/collections/${collection.ratingKey}/items/${key}`
+        );
+      }
+      const missing = ratingKeys.filter((k) => !current.includes(k));
+      if (missing.length) {
+        await this.axios.put(
+          `/library/collections/${collection.ratingKey}/items`,
+          null,
+          { params: { uri: uri(missing) } }
+        );
+      }
+    }
+
+    await this.axios.put(`/library/sections/${sectionId}/all`, null, {
+      params: {
+        type: 18,
+        id: collection.ratingKey,
+        'summary.value': summary,
+        'summary.locked': 1,
+      },
+    });
+  }
+
   public async getRecentlyAdded(
     id: string,
     options: { addedAt: number } = {

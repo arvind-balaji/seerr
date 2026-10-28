@@ -11,6 +11,8 @@ import type {
   MediaResultsResponse,
   MediaWatchDataResponse,
 } from '@server/interfaces/api/mediaInterfaces';
+import libraryCleanup, { CleanupError } from '@server/lib/cleanup';
+import type { CleanupAction } from '@server/lib/cleanup/types';
 import requestDiagnostics, {
   loadMediaForDiagnosis,
 } from '@server/lib/diagnostics';
@@ -99,6 +101,39 @@ mediaRoutes.get('/', async (req, res, next) => {
   }
 });
 
+/** Leaving Soon: keep a title, or (managers) protect it for good. */
+mediaRoutes.post<{ id: string }, unknown, { action: CleanupAction }>(
+  '/:id/cleanup',
+  async (req, res, next) => {
+    if (!['keep', 'unkeep', 'protect', 'unprotect'].includes(req.body.action)) {
+      return next({ status: 400, message: 'Unknown action.' });
+    }
+    const media = await getRepository(Media).findOne({
+      where: { id: Number(req.params.id) },
+    });
+    if (!media) return next({ status: 404, message: 'Media does not exist.' });
+    try {
+      const cleanup = await libraryCleanup.perform(
+        media,
+        req.body.action,
+        req.user as User
+      );
+      return res.status(200).json({ cleanup });
+    } catch (e) {
+      if (e instanceof CleanupError) {
+        return next({ status: e.status, message: e.message });
+      }
+      logger.error('Cleanup action failed', {
+        label: 'Library Cleanup',
+        mediaId: media.id,
+        errorMessage: e.message,
+      });
+      return next({ status: 500, message: 'Something went wrong.' });
+    }
+  }
+);
+
+// Must stay after /:id/cleanup, which it would otherwise swallow.
 mediaRoutes.post<
   {
     id: string;

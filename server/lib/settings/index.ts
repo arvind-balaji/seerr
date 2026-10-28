@@ -183,6 +183,41 @@ export interface DnsCacheSettings {
   forceMaxTtl?: number;
 }
 
+export interface CleanupRule {
+  enabled: boolean;
+  /** Protected if anyone watched it within this many days. */
+  lastWatchedDays: number;
+  /** Protected if added to the library within this many days. */
+  addedDays: number;
+  /** Protected if released this year or in the previous N years. */
+  releaseYears: number;
+  /** How many titles to mark as leaving at a time. */
+  batchSize: number;
+}
+
+export interface CleanupSettings {
+  /** off: nothing runs. preview: shows what would happen. live: acts. */
+  mode: 'off' | 'preview' | 'live';
+  /** A path on the media volume, used to measure free space. */
+  diskPath: string;
+  /** Only mark titles as leaving while the disk is at least this full. */
+  maxUsedPercent: number;
+  /** How long titles stay in Leaving Soon before they're removed. */
+  graceDays: number;
+  /** Titles with this Plex label are never removed. */
+  protectedLabel: string;
+  /** Plex collection that mirrors Leaving Soon; blank to skip. */
+  collectionName: string;
+  /** How long a Keep protects a title. */
+  keepDays: number;
+  /** Active keeps allowed per user; request managers are unlimited. */
+  maxKeepsPerUser: number;
+  /** Stop Radarr import lists from re-adding removed movies. */
+  importExclusion: boolean;
+  movie: CleanupRule;
+  tv: CleanupRule;
+}
+
 export interface NetworkSettings {
   csrfProtection: boolean;
   forceIpv4First: boolean;
@@ -225,6 +260,7 @@ interface FullPublicSettings extends PublicSettings {
   youtubeUrl: string;
   versionCheck: boolean;
   plexClientIdentifier: string;
+  cleanupMode: CleanupSettings['mode'];
 }
 
 export interface NotificationAgentConfig {
@@ -379,7 +415,8 @@ export type JobId =
   | 'image-cache-cleanup'
   | 'availability-sync'
   | 'process-blocklisted-tags'
-  | 'request-diagnostics';
+  | 'request-diagnostics'
+  | 'library-cleanup';
 
 export interface AllSettings {
   clientId: string;
@@ -396,6 +433,7 @@ export interface AllSettings {
   notifications: NotificationSettings;
   jobs: Record<JobId, JobSettings>;
   network: NetworkSettings;
+  cleanup: CleanupSettings;
   metadataSettings: MetadataSettings;
   migrations: string[];
 }
@@ -624,6 +662,34 @@ class Settings {
         'request-diagnostics': {
           schedule: '0 20 */6 * * *',
         },
+        'library-cleanup': {
+          schedule: '0 0 4 * * *',
+        },
+      },
+      cleanup: {
+        mode: 'off',
+        diskPath: '/data',
+        maxUsedPercent: 90,
+        graceDays: 7,
+        protectedLabel: 'evergreen',
+        collectionName: 'Leaving Soon',
+        keepDays: 90,
+        maxKeepsPerUser: 3,
+        importExclusion: true,
+        movie: {
+          enabled: true,
+          lastWatchedDays: 180,
+          addedDays: 180,
+          releaseYears: 1,
+          batchSize: 10,
+        },
+        tv: {
+          enabled: true,
+          lastWatchedDays: 365,
+          addedDays: 180,
+          releaseYears: 1,
+          batchSize: 3,
+        },
       },
       network: {
         csrfProtection: false,
@@ -755,6 +821,7 @@ class Settings {
       youtubeUrl: this.data.main.youtubeUrl,
       versionCheck: this.data.main.versionCheck,
       plexClientIdentifier: this.data.clientId,
+      cleanupMode: this.data.cleanup.mode,
     };
   }
 
@@ -780,6 +847,14 @@ class Settings {
 
   set network(data: NetworkSettings) {
     this.data.network = mergeSettings(this.data.network, data);
+  }
+
+  get cleanup(): CleanupSettings {
+    return this.data.cleanup;
+  }
+
+  set cleanup(data: CleanupSettings) {
+    this.data.cleanup = mergeSettings(this.data.cleanup, data);
   }
 
   get migrations(): string[] {

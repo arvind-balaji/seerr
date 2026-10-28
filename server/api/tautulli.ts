@@ -148,6 +148,39 @@ class TautulliAPI {
     }
   }
 
+  /**
+   * Latest play per title in a library, by any user, keyed by Plex rating key
+   * (the show's key for episodes). In-progress streams count.
+   */
+  public async getLastWatchedBySection(
+    sectionId: string
+  ): Promise<Map<string, number>> {
+    const lastWatched = new Map<string, number>();
+    const pageSize = 1000;
+    for (let start = 0; ; start += pageSize) {
+      const page = (
+        await this.axios.get<TautulliHistoryResponse>('/api/v2', {
+          params: {
+            cmd: 'get_history',
+            section_id: sectionId,
+            include_activity: 1,
+            order_column: 'date',
+            order_dir: 'desc',
+            start,
+            length: pageSize,
+          },
+          timeout: 60000,
+        })
+      ).data.response.data.data;
+      for (const row of page) {
+        const key = String(row.grandparent_rating_key || row.rating_key);
+        const at = (row.stopped || row.started || row.date) * 1000;
+        if (at > (lastWatched.get(key) ?? 0)) lastWatched.set(key, at);
+      }
+      if (page.length < pageSize) return lastWatched;
+    }
+  }
+
   public async getMediaWatchStats(
     ratingKey: string
   ): Promise<TautulliWatchStats[]> {

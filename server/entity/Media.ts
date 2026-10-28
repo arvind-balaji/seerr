@@ -10,6 +10,7 @@ import { getRepository } from '@server/datasource';
 import { Blocklist } from '@server/entity/Blocklist';
 import type { User } from '@server/entity/User';
 import { Watchlist } from '@server/entity/Watchlist';
+import type { MediaCleanup } from '@server/lib/cleanup/types';
 import { stripDiagnosis } from '@server/lib/diagnostics/strip';
 import type { Diagnosis } from '@server/lib/diagnostics/types';
 import type { DownloadingItem } from '@server/lib/downloadtracker';
@@ -226,6 +227,10 @@ class Media {
 
   @Column({ type: 'simple-json', nullable: true })
   public diagnosis4k?: Diagnosis | null;
+
+  /** Leaving Soon / kept / protected state; see server/lib/cleanup. */
+  @Column({ type: 'simple-json', nullable: true })
+  public cleanup?: MediaCleanup | null;
 
   public serviceUrl?: string;
   public serviceUrl4k?: string;

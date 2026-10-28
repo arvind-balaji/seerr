@@ -32,6 +32,7 @@ const defaultSettings = {
   emailEnabled: false,
   newPlexLogin: true,
   youtubeUrl: '',
+  cleanupMode: 'off' as PublicSettingsResponse['cleanupMode'],
   versionCheck: true,
   plexClientIdentifier: '',
 };

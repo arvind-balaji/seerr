@@ -1,6 +1,7 @@
 import { MediaServerType } from '@server/constants/server';
 import blocklistedTagsProcessor from '@server/job/blocklistedTagsProcessor';
 import availabilitySync from '@server/lib/availabilitySync';
+import libraryCleanup from '@server/lib/cleanup';
 import requestDiagnostics from '@server/lib/diagnostics';
 import downloadTracker from '@server/lib/downloadtracker';
 import ImageProxy from '@server/lib/imageproxy';
@@ -210,6 +211,23 @@ export const startJobs = (): void => {
     }),
     running: () => requestDiagnostics.running,
     cancelFn: () => requestDiagnostics.cancel(),
+  });
+
+  // Announce unwatched titles in Leaving Soon, then remove them
+  scheduledJobs.push({
+    id: 'library-cleanup',
+    name: 'Library Cleanup',
+    type: 'process',
+    interval: 'days',
+    cronSchedule: jobs['library-cleanup'].schedule,
+    job: schedule.scheduleJob(jobs['library-cleanup'].schedule, () => {
+      logger.info('Starting scheduled job: Library Cleanup', {
+        label: 'Jobs',
+      });
+      libraryCleanup.run();
+    }),
+    running: () => libraryCleanup.running,
+    cancelFn: () => libraryCleanup.cancel(),
   });
 
   // Run download sync every minute

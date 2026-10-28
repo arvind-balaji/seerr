@@ -16,6 +16,7 @@ import {
   ExclamationTriangleIcon,
   InformationCircleIcon,
 } from '@heroicons/react/24/solid';
+import { MediaStatus } from '@server/constants/media';
 import type Media from '@server/entity/Media';
 import type { CleanupAction, CleanupResponse } from '@server/lib/cleanup/types';
 import axios from 'axios';
@@ -23,7 +24,7 @@ import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import useSWR from 'swr';
 
-/** Leaving Soon, kept or protected: shown on title pages. */
+/** Leaving Soon, kept, protected or removed: shown on title pages. */
 const CleanupCallout = ({
   media,
   onChange,
@@ -43,7 +44,10 @@ const CleanupCallout = ({
 
   if (!media || !cleanup || !status || status.mode === 'off') return null;
   const { state } = cleanup;
-  if (state === 'removed' || (state === 'protected' && !isManager)) {
+  if (
+    (state === 'removed' && media.status !== MediaStatus.DELETED) ||
+    (state === 'protected' && !isManager)
+  ) {
     return null;
   }
 
@@ -93,6 +97,11 @@ const CleanupCallout = ({
     body = intl.formatMessage(
       cleanup.userId === user?.id ? messages.keptByYou : messages.keptBySomeone
     );
+  } else if (state === 'removed') {
+    headline = intl.formatMessage(messages.removedHead, {
+      date: shortDate(intl, cleanup.since),
+    });
+    body = intl.formatMessage(messages.removedBody);
   } else {
     headline = intl.formatMessage(messages.protectedHead);
     body = intl.formatMessage(messages.protectedBody);
@@ -167,7 +176,7 @@ const CleanupCallout = ({
             <span>{intl.formatMessage(messages.undoKeep)}</span>
           </Button>
         )}
-        {isManager && state !== 'protected' && (
+        {isManager && (state === 'leaving' || state === 'kept') && (
           <Button
             buttonType="ghost"
             buttonSize="sm"

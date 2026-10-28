@@ -5485,6 +5485,8 @@ paths:
                   permissions:
                     type: number
                     example: 2
+                  autoApproveReplacements:
+                    type: boolean
     post:
       summary: Update permission settings for a user
       description: Updates and returns permission settings for a specific user. Requires `MANAGE_USERS` permission if editing other users.
@@ -5505,6 +5507,9 @@ paths:
               properties:
                 permissions:
                   type: number
+                autoApproveReplacements:
+                  type: boolean
+                  description: Replace-file requests skip admin approval. Only admins can change it.
               required:
                 - permissions
       responses:
@@ -5518,6 +5523,8 @@ paths:
                   permissions:
                     type: number
                     example: 2
+                  autoApproveReplacements:
+                    type: boolean
   /user/{userId}/watch_data:
     get:
       summary: Get watch data
@@ -8038,6 +8045,9 @@ paths:
                 userId:
                   type: number
                   nullable: true
+                replace:
+                  type: boolean
+                  description: Also blocklist the file and fetch another release. Runs right away for admins and users allowed to skip approval; waits for an admin otherwise.
       responses:
         '201':
           description: Succesfully created the issue
@@ -8211,6 +8221,39 @@ paths:
       responses:
         '204':
           description: Succesfully removed issue comment
+  /issue/{issueId}/replacement:
+    post:
+      summary: Ask for, approve or decline a file replacement
+      description: |
+        `request` asks to delete the issue's movie, season or episode files, blocklist the releases they came from and search for another. `approve` and `decline` require `ADMIN`; approving a failed replacement retries it.
+      tags:
+        - issue
+      parameters:
+        - in: path
+          name: issueId
+          required: true
+          schema:
+            type: string
+            example: '1'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                action:
+                  type: string
+                  enum: [request, approve, decline]
+              required:
+                - action
+      responses:
+        '200':
+          description: The issue, with its replacement state
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Issue'
   /issue/{issueId}/{status}:
     post:
       summary: Update an issue's status

@@ -2,10 +2,16 @@ import PlexAPI from '@server/api/plexapi';
 import RadarrAPI from '@server/api/servarr/radarr';
 import SonarrAPI from '@server/api/servarr/sonarr';
 import TautulliAPI from '@server/api/tautulli';
-import { MediaStatus, MediaType } from '@server/constants/media';
+import {
+  MediaRequestStatus,
+  MediaStatus,
+  MediaType,
+} from '@server/constants/media';
 import { MediaServerType } from '@server/constants/server';
 import { getRepository } from '@server/datasource';
 import Media from '@server/entity/Media';
+import { MediaRequest } from '@server/entity/MediaRequest';
+import SeasonRequest from '@server/entity/SeasonRequest';
 import { User } from '@server/entity/User';
 import type {
   CleanupAction,
@@ -220,6 +226,7 @@ class LibraryCleanup {
         mediaType: kind === 'movie' ? MediaType.MOVIE : MediaType.TV,
         status: In(AVAILABLE),
       },
+      relations: { requests: true },
     });
     const byId = new Map(
       media.map((m) => [kind === 'movie' ? m.tmdbId : m.tvdbId, m])
@@ -245,9 +252,15 @@ class LibraryCleanup {
       if (watched && now - watched < rule.lastWatchedDays * DAY) continue;
       // No added date means Seerr hasn't scanned it properly; leave it alone.
       if (!m.mediaAddedAt) continue;
-      if (now - new Date(m.mediaAddedAt).getTime() < rule.addedDays * DAY) {
-        continue;
-      }
+      // A fresh request counts as newly added, so a title someone asked for
+      // again isn't picked the moment it comes back.
+      const addedAt = Math.max(
+        new Date(m.mediaAddedAt).getTime(),
+        ...(m.requests ?? [])
+          .filter((r) => !r.is4k && r.status !== MediaRequestStatus.DECLINED)
+          .map((r) => new Date(r.createdAt).getTime())
+      );
+      if (now - addedAt < rule.addedDays * DAY) continue;
       if (item.year && item.year >= oldestYear) continue;
 
       candidates.push({
@@ -257,7 +270,7 @@ class LibraryCleanup {
         title: item.title,
         reason: {
           lastWatchedAt: watched ? new Date(watched).toISOString() : undefined,
-          addedAt: new Date(m.mediaAddedAt).toISOString(),
+          addedAt: new Date(addedAt).toISOString(),
           sizeBytes: item.sizeBytes,
           year: item.year,
         },
@@ -306,6 +319,37 @@ class LibraryCleanup {
       reason: media.cleanup?.reason,
     };
     await repo.save(fresh);
+
+    // Approved requests were fulfilled; leaving them open would hide the
+    // Request button and block anyone from asking for the title again.
+    // Listeners are off so the request subscriber doesn't re-send anything.
+    const ids = (
+      await getRepository(MediaRequest).find({
+        select: { id: true },
+        where: {
+          media: { id: media.id },
+          is4k: false,
+          status: MediaRequestStatus.APPROVED,
+        },
+      })
+    ).map((r) => r.id);
+    if (ids.length) {
+      await getRepository(MediaRequest)
+        .createQueryBuilder()
+        .update()
+        .set({ status: MediaRequestStatus.COMPLETED })
+        .whereInIds(ids)
+        .callListeners(false)
+        .execute();
+      await getRepository(SeasonRequest)
+        .createQueryBuilder()
+        .update()
+        .set({ status: MediaRequestStatus.COMPLETED })
+        .where('"requestId" IN (:...ids)', { ids })
+        .andWhere('status = :status', { status: MediaRequestStatus.APPROVED })
+        .callListeners(false)
+        .execute();
+    }
   }
 
   /** Mirrors the leaving titles into each library's Plex collection. */

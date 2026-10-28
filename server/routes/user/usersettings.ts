@@ -712,7 +712,10 @@ userSettingsRoutes.post<{ id: string }, UserSettingsNotificationsResponse>(
   }
 );
 
-userSettingsRoutes.get<{ id: string }, { permissions?: number }>(
+userSettingsRoutes.get<
+  { id: string },
+  { permissions?: number; autoApproveReplacements?: boolean }
+>(
   '/permissions',
   isAuthenticated(Permission.MANAGE_USERS),
   async (req, res, next) => {
@@ -727,7 +730,10 @@ userSettingsRoutes.get<{ id: string }, { permissions?: number }>(
         return next({ status: 404, message: 'User not found.' });
       }
 
-      return res.status(200).json({ permissions: user.permissions });
+      return res.status(200).json({
+        permissions: user.permissions,
+        autoApproveReplacements: !!user.settings?.autoApproveReplacements,
+      });
     } catch (e) {
       next({ status: 500, message: e.message });
     }
@@ -736,8 +742,8 @@ userSettingsRoutes.get<{ id: string }, { permissions?: number }>(
 
 userSettingsRoutes.post<
   { id: string },
-  { permissions?: number },
-  { permissions: number }
+  { permissions?: number; autoApproveReplacements?: boolean },
+  { permissions: number; autoApproveReplacements?: boolean }
 >(
   '/permissions',
   isAuthenticated(Permission.MANAGE_USERS),
@@ -768,10 +774,31 @@ userSettingsRoutes.post<
         });
       }
       user.permissions = req.body.permissions;
+      if (
+        req.body.autoApproveReplacements !== undefined &&
+        req.body.autoApproveReplacements !==
+          !!user.settings?.autoApproveReplacements
+      ) {
+        // Replacements delete files, so only admins hand this out.
+        if (!req.user?.hasPermission(Permission.ADMIN)) {
+          return next({
+            status: 403,
+            message: 'Only an admin can change who skips replacement approval',
+          });
+        }
+        if (!user.settings) {
+          user.settings = new UserSettings({ user });
+        }
+        user.settings.autoApproveReplacements =
+          req.body.autoApproveReplacements;
+      }
 
       await userRepository.save(user);
 
-      return res.status(200).json({ permissions: user.permissions });
+      return res.status(200).json({
+        permissions: user.permissions,
+        autoApproveReplacements: !!user.settings?.autoApproveReplacements,
+      });
     } catch (e) {
       next({ status: 500, message: e.message });
     }

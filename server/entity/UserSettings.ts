@@ -85,6 +85,10 @@ export class UserSettings {
   @Column({ nullable: true })
   public watchlistSyncTv?: boolean;
 
+  /** Replace-file requests on issues run without waiting for an admin. */
+  @Column({ nullable: true })
+  public autoApproveReplacements?: boolean;
+
   @Column({
     type: 'text',
     nullable: true,

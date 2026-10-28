@@ -1,5 +1,6 @@
 import logger from '@server/logger';
 import type { AxiosResponse } from 'axios';
+import type { HistoryRecord } from './base';
 import ServarrBase from './base';
 
 export interface RadarrMovieOptions {
@@ -294,6 +295,26 @@ class RadarrAPI extends ServarrBase<{ movieId: number }> {
       );
     }
   }
+  public getMovieHistory = async (movieId: number): Promise<HistoryRecord[]> =>
+    (
+      await this.axios.get<HistoryRecord[]>('/history/movie', {
+        params: { movieId },
+      })
+    ).data;
+
+  public deleteMovieFile = async (movieFileId: number): Promise<void> => {
+    await this.axios.delete(`/moviefile/${movieFileId}`);
+  };
+
+  /** Monitors the movie and searches for it; unlike searchMovie, throws. */
+  public monitorAndSearch = async (movieId: number): Promise<void> => {
+    const movie = await this.getMovie({ id: movieId });
+    if (!movie.monitored) {
+      await this.axios.put(`/movie/${movieId}`, { ...movie, monitored: true });
+    }
+    await this.runCommand('MoviesSearch', { movieIds: [movieId] });
+  };
+
   /** Switches the movie to another quality profile; returns the previous one. */
   public async setQualityProfile(
     movieId: number,

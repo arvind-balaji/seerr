@@ -80,6 +80,17 @@ interface QueueResponse<QueueItemAppendT> {
   records: (QueueItem & QueueItemAppendT)[];
 }
 
+/** A grab or import in the history of a movie or series. */
+export interface HistoryRecord {
+  id: number;
+  eventType: string;
+  downloadId?: string;
+  episodeId?: number;
+  sourceTitle: string;
+  date: string;
+  data?: { fileId?: string };
+}
+
 class ServarrBase<QueueItemAppendT> extends ExternalAPI {
   static buildUrl(settings: DVRSettings, path?: string): string {
     return `${settings.useSsl ? 'https' : 'http'}://${settings.hostname}:${
@@ -272,6 +283,11 @@ class ServarrBase<QueueItemAppendT> extends ExternalAPI {
         cause: e,
       });
     }
+  };
+
+  /** Marks a grab as failed, which adds that release to the blocklist. */
+  public markHistoryFailed = async (historyId: number): Promise<void> => {
+    await this.axios.post(`/history/failed/${historyId}`);
   };
 
   async refreshMonitoredDownloads(): Promise<void> {

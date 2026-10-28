@@ -37,6 +37,14 @@ const messages = defineMessages('components.IssueModal.CreateIssueModal', {
   toastviewissue: 'View Issue',
   reportissue: 'Report an Issue',
   submitissue: 'Submit Issue',
+  replace: 'Replace the file',
+  replaceDescription:
+    'Deletes it, blocklists the release it came from and downloads a different one.',
+  replaceNeedsApproval: 'An admin may need to approve this first.',
+  replacePickSeason: 'Pick a season to replace it.',
+  toastReplacePending: 'An admin will review the replacement.',
+  toastReplaceStarted: 'Deleted the file and searching for another release.',
+  toastReplaceFailed: "Couldn't replace the file: {error}",
 });
 
 const isMovie = (movie: MovieDetails | TvDetails): movie is MovieDetails => {
@@ -97,6 +105,7 @@ const CreateIssueModal = ({
         message: '',
         problemSeason: availableSeasons.length === 1 ? availableSeasons[0] : 0,
         problemEpisode: 0,
+        replace: false,
       }}
       validationSchema={CreateIssueModalSchema}
       onSubmit={async (values) => {
@@ -108,7 +117,11 @@ const CreateIssueModal = ({
             problemSeason: values.problemSeason,
             problemEpisode:
               values.problemSeason > 0 ? values.problemEpisode : 0,
+            replace:
+              values.replace &&
+              (mediaType === 'movie' || Number(values.problemSeason) > 0),
           });
+          const replacement = newIssue.data.replacement;
 
           if (data) {
             addToast(
@@ -131,6 +144,24 @@ const CreateIssueModal = ({
                 autoDismiss: true,
               }
             );
+            if (replacement) {
+              addToast(
+                replacement.status === 'failed'
+                  ? intl.formatMessage(messages.toastReplaceFailed, {
+                      error: replacement.error,
+                    })
+                  : intl.formatMessage(
+                      replacement.status === 'pending'
+                        ? messages.toastReplacePending
+                        : messages.toastReplaceStarted
+                    ),
+                {
+                  appearance:
+                    replacement.status === 'failed' ? 'error' : 'info',
+                  autoDismiss: true,
+                }
+              );
+            }
 
             mutate('/api/v1/issue/count');
           }
@@ -308,6 +339,29 @@ const CreateIssueModal = ({
                 typeof errors.message === 'string' && (
                   <div className="error">{errors.message}</div>
                 )}
+            </div>
+            <div className="mt-4 flex items-start">
+              <Field
+                type="checkbox"
+                id="replace"
+                name="replace"
+                className="mt-0.5"
+                disabled={
+                  mediaType === 'tv' && Number(values.problemSeason) === 0
+                }
+              />
+              <label htmlFor="replace" className="ml-3 text-sm">
+                <span className="block font-medium text-gray-100">
+                  {intl.formatMessage(messages.replace)}
+                </span>
+                <span className="block font-normal text-gray-400">
+                  {mediaType === 'tv' && Number(values.problemSeason) === 0
+                    ? intl.formatMessage(messages.replacePickSeason)
+                    : intl.formatMessage(messages.replaceDescription)}{' '}
+                  {!hasPermission(Permission.ADMIN) &&
+                    intl.formatMessage(messages.replaceNeedsApproval)}
+                </span>
+              </label>
             </div>
           </Modal>
         );

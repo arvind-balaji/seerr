@@ -1,5 +1,6 @@
 import type { IssueType } from '@server/constants/issue';
 import { IssueStatus } from '@server/constants/issue';
+import type { IssueReplacement } from '@server/lib/replacement/types';
 import { DbAwareColumn, resolveDbType } from '@server/utils/DbColumnHelper';
 import {
   AfterLoad,
@@ -60,6 +61,10 @@ class Issue {
     eager: true,
   })
   public comments: IssueComment[];
+
+  /** A request to blocklist the file and fetch another; see server/lib/replacement. */
+  @Column({ type: 'simple-json', nullable: true })
+  public replacement?: IssueReplacement | null;
 
   @DbAwareColumn({ type: 'datetime', default: () => 'CURRENT_TIMESTAMP' })
   public createdAt: Date;

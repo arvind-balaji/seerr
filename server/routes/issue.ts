@@ -1,4 +1,5 @@
 import { IssueStatus, IssueType } from '@server/constants/issue';
+import { MediaType } from '@server/constants/media';
 import { getRepository } from '@server/datasource';
 import Issue from '@server/entity/Issue';
 import IssueComment from '@server/entity/IssueComment';
@@ -9,6 +10,7 @@ import type {
   IssueResultsResponse,
 } from '@server/interfaces/api/issueInterfaces';
 import { Permission } from '@server/lib/permissions';
+import { canAutoApprove, runReplacement } from '@server/lib/replacement';
 import logger from '@server/logger';
 import { isAuthenticated } from '@server/middleware/auth';
 import { Router } from 'express';
@@ -158,7 +160,27 @@ issueRoutes.post<Record<string, string>, Issue, IssueRequestBody>(
       ],
     });
 
+    if (req.body.replace) {
+      if (media.mediaType === MediaType.TV && !req.body.problemSeason) {
+        return next({
+          status: 400,
+          message: 'Pick the season to replace.',
+        });
+      }
+      issue.replacement = {
+        status: 'pending',
+        requestedAt: new Date().toISOString(),
+      };
+    }
+
     const newIssue = await issueRepository.save(issue);
+
+    if (newIssue.replacement && canAutoApprove(req.user)) {
+      newIssue.replacement = await runReplacement(newIssue, req.user, true);
+      await issueRepository.update(newIssue.id, {
+        replacement: newIssue.replacement,
+      });
+    }
 
     return res.status(201).json(newIssue);
   }
@@ -320,6 +342,96 @@ issueRoutes.post<{ issueId: string }, Issue, { message: string }>(
         errorMessage: e.message,
       });
       next({ status: 500, message: 'Issue not found.' });
+    }
+  }
+);
+
+issueRoutes.post<
+  { issueId: string },
+  Issue,
+  { action: 'request' | 'approve' | 'decline' }
+>(
+  '/:issueId/replacement',
+  isAuthenticated([Permission.MANAGE_ISSUES, Permission.CREATE_ISSUES], {
+    type: 'or',
+  }),
+  async (req, res, next) => {
+    const issueRepository = getRepository(Issue);
+    if (!req.user) {
+      return next({ status: 500, message: 'User missing from request.' });
+    }
+
+    try {
+      const issue = await issueRepository.findOneOrFail({
+        where: { id: Number(req.params.issueId) },
+      });
+      const isAdmin = req.user.hasPermission(Permission.ADMIN);
+      const { action } = req.body;
+      const current = issue.replacement?.status;
+
+      if (action === 'request') {
+        if (
+          issue.createdBy.id !== req.user.id &&
+          !req.user.hasPermission(Permission.MANAGE_ISSUES)
+        ) {
+          return next({
+            status: 403,
+            message: 'You can only ask for a replacement on your own issues.',
+          });
+        }
+        if (current === 'pending') {
+          return next({ status: 409, message: 'Already waiting on an admin.' });
+        }
+        if (issue.media.mediaType === MediaType.TV && !issue.problemSeason) {
+          return next({
+            status: 400,
+            message: 'Pick the season to replace.',
+          });
+        }
+        issue.replacement = {
+          status: 'pending',
+          requestedAt: new Date().toISOString(),
+        };
+        if (canAutoApprove(req.user)) {
+          issue.replacement = await runReplacement(issue, req.user, true);
+        }
+      } else if (action === 'approve' || action === 'decline') {
+        if (!isAdmin) {
+          return next({
+            status: 403,
+            message: 'Only an admin can approve or decline replacements.',
+          });
+        }
+        // A failed attempt can be approved again to retry it.
+        if (current !== 'pending' && current !== 'failed') {
+          return next({ status: 409, message: 'Nothing to approve.' });
+        }
+        issue.replacement =
+          action === 'approve'
+            ? await runReplacement(issue, req.user, false)
+            : {
+                ...issue.replacement!,
+                status: 'declined',
+                decidedAt: new Date().toISOString(),
+                decidedBy: {
+                  id: req.user.id,
+                  displayName: req.user.displayName,
+                },
+              };
+      } else {
+        return next({ status: 400, message: 'Unknown action.' });
+      }
+
+      await issueRepository.update(issue.id, {
+        replacement: issue.replacement,
+      });
+      return res.status(200).json(issue);
+    } catch (e) {
+      logger.error('Failed to update the file replacement', {
+        label: 'API',
+        errorMessage: e.message,
+      });
+      next({ status: 500, message: 'Failed to update the file replacement.' });
     }
   }
 );

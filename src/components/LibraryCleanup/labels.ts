@@ -15,6 +15,9 @@ export const messages = defineMessages('components.LibraryCleanup', {
   protectedHead: 'Protected from cleanup',
   protectedBody:
     "It won't be removed automatically, however long it goes unwatched.",
+  removedHead: 'Removed {date} to free up space',
+  removedBody:
+    'Nobody had watched it in a while. Request it again to bring it back.',
   keep: 'Keep',
   keepTip: 'Keeps it for {days} days. You can keep {left} more.',
   keepNoneLeft:

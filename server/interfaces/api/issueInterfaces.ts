@@ -13,4 +13,6 @@ export type IssueRequestBody = {
   problemSeason?: number;
   problemEpisode?: number;
   userId?: number;
+  /** Also blocklist the file and fetch another release. */
+  replace?: boolean;
 };

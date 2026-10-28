@@ -1,5 +1,6 @@
 import logger from '@server/logger';
 import type { AxiosResponse } from 'axios';
+import type { HistoryRecord } from './base';
 import ServarrBase from './base';
 
 export interface SonarrSeason {
@@ -383,6 +384,25 @@ class SonarrAPI extends ServarrBase<{
       seasonNumber,
     });
     await this.runCommand('SeasonSearch', { seriesId, seasonNumber });
+  }
+
+  public async getSeriesHistory(
+    seriesId: number,
+    seasonNumber: number
+  ): Promise<HistoryRecord[]> {
+    return (
+      await this.axios.get<HistoryRecord[]>('/history/series', {
+        params: { seriesId, seasonNumber },
+      })
+    ).data;
+  }
+
+  public async deleteEpisodeFile(episodeFileId: number): Promise<void> {
+    await this.axios.delete(`/episodefile/${episodeFileId}`);
+  }
+
+  public async searchEpisodes(episodeIds: number[]): Promise<void> {
+    await this.runCommand('EpisodeSearch', { episodeIds });
   }
 
   /** Switches the series to another quality profile; returns the previous one. */

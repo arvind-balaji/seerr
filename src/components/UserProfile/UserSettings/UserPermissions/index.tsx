@@ -4,7 +4,7 @@ import LoadingSpinner from '@app/components/Common/LoadingSpinner';
 import PageTitle from '@app/components/Common/PageTitle';
 import PermissionEdit from '@app/components/PermissionEdit';
 import useToasts from '@app/hooks/useToasts';
-import { useUser } from '@app/hooks/useUser';
+import { Permission, useUser } from '@app/hooks/useUser';
 import globalMessages from '@app/i18n/globalMessages';
 import ErrorPage from '@app/pages/_error';
 import defineMessages from '@app/utils/defineMessages';
@@ -22,6 +22,10 @@ const messages = defineMessages(
     toastSettingsFailure: 'Something went wrong while saving settings.',
     permissions: 'Permissions',
     unauthorizedDescription: 'You cannot modify your own permissions.',
+    autoApproveReplacements: 'Skip Approval for File Replacements',
+    autoApproveReplacementsDescription:
+      'Asking to replace a file from an issue deletes it, blocklists the release and downloads another right away, without waiting for an admin.',
+    autoApproveReplacementsAdminOnly: 'Only admins can change this.',
   }
 );
 
@@ -29,7 +33,7 @@ const UserPermissions = () => {
   const intl = useIntl();
   const { addToast } = useToasts();
   const router = useRouter();
-  const { user: currentUser } = useUser();
+  const { user: currentUser, hasPermission } = useUser();
   const { user, revalidate: revalidateUser } = useUser({
     id: Number(router.query.userId),
   });
@@ -37,7 +41,7 @@ const UserPermissions = () => {
     data,
     error,
     mutate: revalidate,
-  } = useSWR<{ permissions?: number }>(
+  } = useSWR<{ permissions?: number; autoApproveReplacements?: boolean }>(
     user ? `/api/v1/user/${user?.id}/settings/permissions` : null
   );
 
@@ -80,12 +84,14 @@ const UserPermissions = () => {
       <Formik
         initialValues={{
           currentPermissions: data?.permissions,
+          autoApproveReplacements: !!data?.autoApproveReplacements,
         }}
         enableReinitialize
         onSubmit={async (values) => {
           try {
             await axios.post(`/api/v1/user/${user?.id}/settings/permissions`, {
               permissions: values.currentPermissions ?? 0,
+              autoApproveReplacements: values.autoApproveReplacements,
             });
 
             addToast(intl.formatMessage(messages.toastSettingsSuccess), {
@@ -115,6 +121,50 @@ const UserPermissions = () => {
                     setFieldValue('currentPermissions', newPermission)
                   }
                 />
+                <div
+                  className={`relative mt-4 flex items-start ${
+                    hasPermission(Permission.ADMIN) ? '' : 'opacity-50'
+                  }`}
+                >
+                  <div className="flex h-6 items-center">
+                    <input
+                      id="autoApproveReplacements"
+                      type="checkbox"
+                      disabled={!hasPermission(Permission.ADMIN)}
+                      checked={values.autoApproveReplacements}
+                      onChange={() =>
+                        setFieldValue(
+                          'autoApproveReplacements',
+                          !values.autoApproveReplacements
+                        )
+                      }
+                    />
+                  </div>
+                  <div className="ml-3 text-sm leading-6">
+                    <label
+                      htmlFor="autoApproveReplacements"
+                      className="block"
+                      aria-label={intl.formatMessage(
+                        messages.autoApproveReplacements
+                      )}
+                    >
+                      <div className="flex flex-col">
+                        <span className="font-medium text-white">
+                          {intl.formatMessage(messages.autoApproveReplacements)}
+                        </span>
+                        <span className="font-normal text-gray-400">
+                          {intl.formatMessage(
+                            messages.autoApproveReplacementsDescription
+                          )}
+                          {!hasPermission(Permission.ADMIN) &&
+                            ` ${intl.formatMessage(
+                              messages.autoApproveReplacementsAdminOnly
+                            )}`}
+                        </span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
               </div>
               <div className="actions">
                 <div className="flex justify-end">

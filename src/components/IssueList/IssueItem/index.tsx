@@ -19,6 +19,7 @@ import useSWR from 'swr';
 
 const messages = defineMessages('components.IssueList.IssueItem', {
   openeduserdate: '{date} by {user}',
+  replacementPending: 'Replacement Pending',
   seasons: '{seasonCount, plural, one {Season} other {Seasons}}',
   episodes: '{episodeCount, plural, one {Episode} other {Episodes}}',
   problemepisode: 'Affected Episode',
@@ -228,6 +229,15 @@ const IssueItem = ({ issue }: IssueItemProps) => {
             ) : (
               <Badge badgeType="success" href={`/issues/${issue.id}`}>
                 {intl.formatMessage(globalMessages.resolved)}
+              </Badge>
+            )}
+            {issue.replacement?.status === 'pending' && (
+              <Badge
+                badgeType="primary"
+                href={`/issues/${issue.id}`}
+                className="ml-2"
+              >
+                {intl.formatMessage(messages.replacementPending)}
               </Badge>
             )}
           </div>

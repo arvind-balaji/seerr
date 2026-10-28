@@ -213,6 +213,11 @@ export class MediaRequest {
       ) {
         media.status4k = MediaStatus.PENDING;
       }
+
+      // Asking again for a title library cleanup removed starts it fresh.
+      if (media.cleanup?.state === 'removed' && !requestBody.is4k) {
+        media.cleanup = null;
+      }
     }
 
     const existing = await requestRepository
@@ -231,7 +236,10 @@ export class MediaRequest {
       if (
         requestBody.mediaType === MediaType.MOVIE &&
         existing[0].status !== MediaRequestStatus.DECLINED &&
-        existing[0].status !== MediaRequestStatus.COMPLETED
+        existing[0].status !== MediaRequestStatus.COMPLETED &&
+        // A request for a title that has since been deleted is stale.
+        existing[0].media?.[requestBody.is4k ? 'status4k' : 'status'] !==
+          MediaStatus.DELETED
       ) {
         logger.warn('Duplicate request for media blocked', {
           tmdbId: tmdbMedia.id,

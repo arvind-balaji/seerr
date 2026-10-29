@@ -36,7 +36,12 @@ export const shadowReadOnlyInterceptor = (
     /([?&]apikey=)[^&]*/i,
     '$1***'
   );
-  logger.warn(`Would ${method.toUpperCase()} ${url}`, {
+  // Arr commands (searches) are all POST /command; name the command.
+  const command =
+    config.data && typeof config.data === 'object' && 'name' in config.data
+      ? ` (${String(config.data.name)})`
+      : '';
+  logger.warn(`Would ${method.toUpperCase()} ${url}${command}`, {
     label: 'Shadow Mode',
   });
   throw new ShadowModeError(method.toUpperCase(), url);

@@ -2,6 +2,7 @@ import ExternalAPI from '@server/api/externalapi';
 import type { AvailableCacheIds } from '@server/lib/cache';
 import cacheManager from '@server/lib/cache';
 import { getSettings, type DVRSettings } from '@server/lib/settings';
+import { isShadowMode } from '@server/lib/shadow';
 
 export interface SystemStatus {
   version: string;
@@ -292,6 +293,8 @@ class ServarrBase<QueueItemAppendT> extends ExternalAPI {
   };
 
   async refreshMonitoredDownloads(): Promise<void> {
+    // Harmless, and production already asks for it every few seconds.
+    if (isShadowMode()) return;
     await this.runCommand('RefreshMonitoredDownloads', {});
   }
 

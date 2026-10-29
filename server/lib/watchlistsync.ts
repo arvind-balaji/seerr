@@ -11,11 +11,17 @@ import {
   RequestPermissionError,
 } from '@server/entity/MediaRequest';
 import { User } from '@server/entity/User';
+import { isShadowMode } from '@server/lib/shadow';
 import logger from '@server/logger';
 import { Permission } from './permissions';
 
 class WatchlistSync {
   public async syncWatchlist() {
+    // It creates requests, which would add titles to Radarr/Sonarr.
+    if (isShadowMode()) {
+      logger.info('Skipping watchlist sync', { label: 'Shadow Mode' });
+      return;
+    }
     const userRepository = getRepository(User);
 
     // Get users who actually have plex tokens

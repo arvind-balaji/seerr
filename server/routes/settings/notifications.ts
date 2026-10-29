@@ -13,6 +13,7 @@ import TelegramAgent from '@server/lib/notifications/agents/telegram';
 import WebhookAgent from '@server/lib/notifications/agents/webhook';
 import WebPushAgent from '@server/lib/notifications/agents/webpush';
 import { getSettings } from '@server/lib/settings';
+import { isShadowMode } from '@server/lib/shadow';
 import type { AvailableLocale } from '@server/types/languages';
 import { Router } from 'express';
 
@@ -24,6 +25,9 @@ const messages = defineMessages('notifications.test', {
 });
 
 const sendTestNotification = async (agent: NotificationAgent, user: User) => {
+  if (isShadowMode()) {
+    return false;
+  }
   const intl = getIntl(user.settings?.locale as AvailableLocale);
 
   return await agent.send(Notification.TEST_NOTIFICATION, {

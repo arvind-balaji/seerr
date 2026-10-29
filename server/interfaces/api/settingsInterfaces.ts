@@ -52,6 +52,7 @@ export interface PublicSettingsResponse {
   versionCheck: boolean;
   plexClientIdentifier: string;
   cleanupMode: 'off' | 'preview' | 'live';
+  shadowMode: boolean;
 }
 
 export interface CacheItem {

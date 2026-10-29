@@ -1,4 +1,5 @@
 import type { CacheStore } from '@server/lib/cache';
+import { shadowReadOnlyInterceptor } from '@server/lib/shadow';
 import { proxyRequestInterceptor } from '@server/utils/customProxyAgent';
 import { userAgentRequestInterceptor } from '@server/utils/userAgent';
 import type { AxiosInstance, AxiosRequestConfig } from 'axios';
@@ -19,6 +20,8 @@ export interface ExternalAPIOptions {
     maxRPS: number;
     maxRequests: number;
   };
+  /** Refuse writes when SHADOW_MODE is on (see server/lib/shadow.ts). */
+  readOnlyInShadowMode?: boolean;
 }
 
 class ExternalAPI {
@@ -43,6 +46,9 @@ class ExternalAPI {
     });
     this.axios.interceptors.request.use(proxyRequestInterceptor);
     this.axios.interceptors.request.use(userAgentRequestInterceptor);
+    if (options.readOnlyInShadowMode) {
+      this.axios.interceptors.request.use(shadowReadOnlyInterceptor);
+    }
 
     if (options.rateLimit) {
       this.axios = rateLimit(this.axios, {

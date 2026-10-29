@@ -1,6 +1,7 @@
 import { MediaServerType } from '@server/constants/server';
 import { Permission } from '@server/lib/permissions';
 import { runMigrations } from '@server/lib/settings/migrator';
+import { isShadowMode } from '@server/lib/shadow';
 import type { AvailableLocale } from '@server/types/languages';
 import { randomBytes, randomUUID } from 'crypto';
 import fs from 'fs/promises';
@@ -261,6 +262,7 @@ interface FullPublicSettings extends PublicSettings {
   versionCheck: boolean;
   plexClientIdentifier: string;
   cleanupMode: CleanupSettings['mode'];
+  shadowMode: boolean;
 }
 
 export interface NotificationAgentConfig {
@@ -822,6 +824,7 @@ class Settings {
       versionCheck: this.data.main.versionCheck,
       plexClientIdentifier: this.data.clientId,
       cleanupMode: this.data.cleanup.mode,
+      shadowMode: isShadowMode(),
     };
   }
 

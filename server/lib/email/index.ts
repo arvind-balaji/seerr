@@ -1,5 +1,6 @@
 import type { NotificationAgentEmail } from '@server/lib/settings';
 import { getSettings } from '@server/lib/settings';
+import { isShadowMode } from '@server/lib/shadow';
 import Email from 'email-templates';
 import net from 'node:net';
 import nodemailer from 'nodemailer';
@@ -87,7 +88,8 @@ class PreparedEmail extends Email {
           address: settings.options.emailFrom,
         },
       },
-      send: true,
+      // Shadow mode renders emails but never sends them.
+      send: !isShadowMode(),
       transport: transport,
       preview: false,
     });

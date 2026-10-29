@@ -265,6 +265,7 @@ CoreApp.getInitialProps = async (initialProps) => {
     versionCheck: true,
     plexClientIdentifier: '',
     cleanupMode: 'off',
+    shadowMode: false,
   };
 
   if (ctx.res) {

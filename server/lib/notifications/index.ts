@@ -1,5 +1,6 @@
 import type { User } from '@server/entity/User';
 import { Permission } from '@server/lib/permissions';
+import { isShadowMode } from '@server/lib/shadow';
 import logger from '@server/logger';
 import type { NotificationAgent, NotificationPayload } from './agents/agent';
 
@@ -101,6 +102,13 @@ class NotificationManager {
     type: Notification,
     payload: NotificationPayload
   ): void {
+    if (isShadowMode()) {
+      logger.info(`Would send notification(s) for ${Notification[type]}`, {
+        label: 'Shadow Mode',
+        subject: payload.subject,
+      });
+      return;
+    }
     logger.info(`Sending notification(s) for ${Notification[type]}`, {
       label: 'Notifications',
       subject: payload.subject,

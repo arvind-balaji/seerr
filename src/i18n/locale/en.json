@@ -253,6 +253,8 @@
   "components.LanguageSelector.originalLanguageDefault": "All Languages",
   "components.Layout.LanguagePicker.displaylanguage": "Display Language",
   "components.Layout.SearchInput.searchPlaceholder": "Search Movies & Series",
+  "components.Layout.ShadowModeBanner.description": "This instance only observes. Nothing is added, changed or deleted in Radarr, Sonarr or Plex, and no notifications are sent.",
+  "components.Layout.ShadowModeBanner.title": "Shadow mode",
   "components.Layout.Sidebar.blocklist": "Blocklist",
   "components.Layout.Sidebar.browsemovies": "Movies",
   "components.Layout.Sidebar.browsetv": "Series",

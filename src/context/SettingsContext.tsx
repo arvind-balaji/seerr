@@ -35,6 +35,7 @@ const defaultSettings = {
   cleanupMode: 'off' as PublicSettingsResponse['cleanupMode'],
   versionCheck: true,
   plexClientIdentifier: '',
+  shadowMode: false,
 };
 
 export const SettingsContext = React.createContext<SettingsContextProps>({

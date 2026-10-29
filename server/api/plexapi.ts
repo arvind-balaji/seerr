@@ -114,6 +114,7 @@ class PlexAPI extends ExternalAPI {
       {},
       {
         timeout,
+        readOnlyInShadowMode: true,
         headers: {
           'X-Plex-Token': plexToken ?? '',
           'X-Plex-Client-Identifier': settings.clientId,

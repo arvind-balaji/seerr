@@ -23,6 +23,7 @@ import type {
 import { Permission } from '@server/lib/permissions';
 import type { CleanupRule } from '@server/lib/settings';
 import { getSettings } from '@server/lib/settings';
+import { isShadowMode } from '@server/lib/shadow';
 import logger from '@server/logger';
 import { appDataPath } from '@server/utils/appDataVolume';
 import { readFileSync } from 'fs';
@@ -355,7 +356,8 @@ class LibraryCleanup {
   /** Mirrors the leaving titles into each library's Plex collection. */
   public async syncCollections(kind: Kind) {
     const settings = getSettings().cleanup;
-    if (settings.mode !== 'live' || !settings.collectionName) return;
+    if (settings.mode !== 'live' || isShadowMode() || !settings.collectionName)
+      return;
     const leaving = await this.leaving(kind);
     const plex = await this.plex();
     const firstRemoval = leaving
@@ -425,7 +427,8 @@ class LibraryCleanup {
     }
     this.running = true;
     this.cancelled = false;
-    const live = settings.mode === 'live';
+    // Shadow mode always runs as a preview.
+    const live = settings.mode === 'live' && !isShadowMode();
     const disk = await this.diskUsage();
     const known = disk.usedPercent !== undefined;
     const full = known && (disk.usedPercent ?? 0) >= settings.maxUsedPercent;
